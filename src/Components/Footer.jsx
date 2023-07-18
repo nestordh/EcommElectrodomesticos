@@ -14,7 +14,6 @@ export default Footer
 
 const styles = StyleSheet.create({
     containerFooter:{
-        height: "4%",
         backgroundColor: colores.Light,
         justifyContent: "center",
         alignItems: "center"

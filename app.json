@@ -1,9 +1,8 @@
 {
   "expo": {
-    "name": "Desafio03_Heredia",
-    "slug": "desafio03",
+    "name": "DesafioClase9_Heredia",
+    "slug": "desafioClase09",
     "version": "1.0.0",
-    "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {

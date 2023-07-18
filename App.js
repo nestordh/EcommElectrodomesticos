@@ -1,44 +1,22 @@
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Platform, StatusBar, SafeAreaView } from 'react-native';
 import Header from './src/Components/Header';
 import Home from './src/Screens/Home';
-import ItemListCategory from './src/Screens/ItemListCategory';
 import { useFonts } from 'expo-font';
-import { useState } from 'react';
-import Footer from './src/Components/Footer';
+import Navigator from './src/Navigation/Navigator';
 
 export default function App() {
 
-  const [categorySelected, setCategorySelected] = useState("")
-
   const [fontsLoaded] = useFonts({
-       'Lobster': require('../Desafio03_Heredia/src/Assets/Fonts/Lobster/Lobster-Regular.ttf'),
-       'Noto-Sans': require('../Desafio03_Heredia/src/Assets/Fonts/Noto-Sans/NotoSans-BlackItalic.ttf')
+       'Lobster': require('./src/Assets/Fonts/Lobster/Lobster-Regular.ttf'),
+       'Noto-Sans': require('./src/Assets/Fonts/Noto-Sans/NotoSans-BlackItalic.ttf')
        });
-
-  if (!fontsLoaded) {
-    return null;
-  }
+       if (!fontsLoaded) {
+         return null;
+      }
    
   return (
-    <View style = {styles.container}>
-      <Header/>
-      {
-        categorySelected ? 
-        <ItemListCategory 
-          category = { categorySelected }
-          setCategory = {setCategorySelected }
-          /> :
-        <Home
-          setCategorySelected = { setCategorySelected }
-        />
-      }
-      <Footer/>
-    </View>
-  );
+    
+    <Navigator/>
+  
+    );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  }
-})
