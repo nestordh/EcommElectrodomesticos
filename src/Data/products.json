@@ -533,5 +533,119 @@
   "stock": 20,
   "description": "Tv LED 75 Pulgadas",
   "brand":"Samsung"
+},
+{
+  "id": 35,
+  "title": "Fgt 34vmn",
+  "price": 1100,
+  "category": "Freezer",
+  "images": 
+  [ 
+    "https://storage.beko.co.uk/blomberg2018products/large/FNT3454i%20Front%20Open.png",
+     "https://kitchenaid-h.assetsadobe.com/is/image/content/dam/global/maytag/refrigeration/freezer/images/hero-MZF34X20DW.tif?&fmt=png-alpha&resMode=sharp2&wid=850&hei=850"
+],
+  "stock": 5,
+  "description": "Freezer vertical de 340litros ",
+  "brand":"Whirpool"
+},
+{
+  "id": 36,
+  "title": "freezer 750hy/xbv",
+  "price": 1100,
+  "category": "Freezer",
+  "images": 
+  [ 
+     "https://www.genbiotech.net/image/cache/Haier/W020140523535191526640-600x315w.png",
+     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF-YnO4_ux9tHnEJlniQikjwRM7vcd4Bb2mjZtBKLQOoR1FCEkhnYaiOdC1nH2x6QGF18&usqp=CAU"
+],
+  "stock": 20,
+  "description": "Freezer horizontal de 750litros 2 puertas color azul",
+  "brand":"Sunny"
+},
+{
+  "id": 37,
+  "title": "aud45xbv",
+  "price": 100,
+  "category": "Audio",
+  "images": 
+  [ 
+     "https://images.samsung.com/is/image/samsung/latin_MX-F630-ZP_510_Front_black?$624_624_PNG$",
+     "https://images.samsung.com/is/image/samsung/latin_MX-F630-ZP_510_Front_black?$624_624_PNG$"
+],
+  "stock": 20,
+  "description": "Equipo de audio reproductor musica",
+  "brand":"Samsung"
+},
+{
+  "id": 38,
+  "title": "fbm90fg/xbv",
+  "price": 800,
+  "category": "Freezer",
+  "images": 
+  [ 
+     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMNwNQUg20c_YzmtIdhgFsiel_tij5idz8Ag&usqp=CAU",
+     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnq01wDh2NZNWwWyNnYSbZ49lGDrvn28EZUFVr0c0Ak8jtCi_z6AXO3HRy8EK1NBQVhO0&usqp=CAU"
+],
+  "stock": 20,
+  "description": "Freezer de 90litros Bajo mesada nofrost 1 cajon 2 estantes",
+  "brand":"conns"
+},
+
+{
+  "id": 39,
+  "title": "Plancha 45hj",
+  "price": 1100,
+  "category": "Pequeños",
+  "images": 
+  [ 
+     "https://e7.pngegg.com/pngimages/635/527/png-clipart-clothes-iron-ironing-iron-electronics-image-file-formats.png",
+     "https://e7.pngegg.com/pngimages/186/74/png-clipart-clothes-iron-digital-small-appliance-plancha-photography-sticker.png"
+],
+  "stock": 20,
+  "description": "Tv LED 75 Pulgadas",
+  "brand":"Samsung"
+},
+
+{
+  "id": 40,
+  "title": "Plancha 45hj",
+  "price": 1100,
+  "category": "Pequeños",
+  "images": 
+  [ 
+     "https://e7.pngegg.com/pngimages/635/527/png-clipart-clothes-iron-ironing-iron-electronics-image-file-formats.png",
+     "https://e7.pngegg.com/pngimages/186/74/png-clipart-clothes-iron-digital-small-appliance-plancha-photography-sticker.png"
+],
+  "stock": 20,
+  "description": "Tv LED 75 Pulgadas",
+  "brand":"Samsung"
+},
+{
+  "id": 41,
+  "title": "estufa de jardin a leños ",
+  "price": 2500,
+  "category": "Calefaccion",
+  "images": 
+  [ 
+     "https://www.elmaitenmuebles.com.ar/EM/imagenes/calefaccion/natural/estufas/pam900-800x600.webp",
+     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN0XgR5biag1auvh-IBWezoPyszOHYFq2wNw&usqp=CAU"
+],
+  "stock": 8,
+  "description": "Estufa para jardin cerrado a leños",
+  "brand":"Garden"
+},
+{
+  "id": 42,
+  "title": "Impresora Laser jet45rt ",
+  "price": 1580,
+  "category": "Impresoras",
+  "images": 
+  [ 
+     "https://cdn.pixabay.com/photo/2013/07/12/15/23/laser-printer-149815_640.png",
+     "https://cdn.pixabay.com/photo/2013/07/12/15/23/laser-printer-149815_640.png"
+],
+  "stock": 5,
+  "description": "impresora Laser color compacta",
+  "brand":"impjet"
 }
 ]
