@@ -11,7 +11,11 @@
         "https://images.samsung.com/is/image/samsung/assets/ar/refrigerators/side_by_side140x140.png?$N_108_PNG$"
       ],
     "stock": 20,
-    "description": "Heladera con freezer nofrost de 380 litros de capacidad"
+    "description": "Heladera con freezer nofrost de 380 litros de capacidad",
+    "discountPercentage": 4.5,
+    "rating": 2.2,
+    "thumbnail":"https://images.samsung.com/is/image/samsung/assets/ar/refrigerators/side_by_side140x140.png?$N_108_PNG$",
+    "quantity": 2
   },
   {
     "id": 2,
@@ -647,5 +651,19 @@
   "stock": 5,
   "description": "impresora Laser color compacta",
   "brand":"impjet"
+},
+{
+  "id": 43,
+  "title": "wm120mvh",
+  "price" : 515,
+  "category": "Lavarropas",
+  "images":
+  [
+     "https://images.samsung.com/is/image/samsung/ar-ww65m0nhuu-ww65m0nhuu-xbg-kg-149287375?$650_519_PNG$",
+     "https://samsungar.vtexassets.com/arquivos/ids/185555-320-332/Samsung-112332839-ar-washer-ww80j5446fwle-437891-ww70aa046bxubg-533939880--Download-Source--zoom.jpg?v=638025666365870000"
+  ],
+  "stock": 20,
+  "description": "Wash Machine",
+  "brand":"Samsung"
 }
 ]

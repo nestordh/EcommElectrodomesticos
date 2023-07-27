@@ -2,15 +2,13 @@ import { StyleSheet, Text, Image, useWindowDimensions, Pressable } from 'react-n
 import React from 'react'
 import Card from './Card'
 import { colores } from '../Global/Colores'
-
-import ItemDetail from '../Screens/ItemDetail'
-
+import { useDispatch } from 'react-redux'
 
 const ProductItem = ( { item, navigation }) => {
   
   const  { height, width }  = useWindowDimensions();
-
-  const onSelect = (id) => { navigation.navigate ( 'Detail', { productId: item.id, title: item.title } ) }
+  const dispatch = useDispatch()
+  const onSelect = () => { navigation.navigate ( 'Detail', { productId: item.id, title: item.title } ) }
 
   return (
     <Pressable onPress={() => onSelect(item.id)}>  
@@ -36,7 +34,7 @@ export default ProductItem
 const styles = StyleSheet.create({
   image: {
     height: 100,
-    width: 100,
+    width: "75%",
     borderRadius: 8,
     padding: 20,
     backgroundColor: colores.plata,
@@ -49,11 +47,11 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   textCategory: {
-    width: '50%',
+    width: '60%',
     fontSize: 22 ,
   },
   textCategorySm: {
-    width: '50%',
+    width: '60%',
     fontSize: 15 ,
   },
 })

@@ -3,24 +3,20 @@ import React, { useEffect, useState } from 'react'
 import ProductItem from '../Components/ProductItem'
 import { colores } from '../Global/Colores'
 import Search from '../Components/Search'
-import productsRaw from '../Data/products.json' 
+import { useSelector } from 'react-redux'
+
 
 const ItemListCategory = ( { navigation, route } ) => {
-
   const {category} = route.params
+  const productsSelected = useSelector (state => state.marketReducer.value.productsSelected)
   const [products, setProducts] = useState([])
   const [keyword, setKeyword] = useState ("")
   const [keywordError, setKeywordError] = useState ("")
 
-
   useEffect(()=> {
-    const productsFiltered = productsRaw.filter
-                           ( product => product.category === category 
-                          && product.title.toLocaleLowerCase().includes(keyword.toLowerCase()))  
-    
-    setProducts(productsFiltered)
-
-  }, [ keyword, category])
+        const productsFiltered = productsSelected.filter ( product => product.title.toLocaleLowerCase().includes(keyword.toLowerCase()))  
+        setProducts(productsFiltered)
+    }, [ keyword, productsSelected])
 
   const onSearch = (input) => {
   const expression = /^[a-zA-Z0-9\ ]*$/
@@ -40,13 +36,16 @@ const ItemListCategory = ( { navigation, route } ) => {
           onSearch = { onSearch }
           error = { keywordError }
           goBack = { () => navigation.goBack() } />
+       
         <FlatList
             data = { products }
             keyExtractor = { product => product.id }
             renderItem = { ( { item } ) => 
-                   <ProductItem 
-                        item = { item } 
-                        navigation = { navigation } /> }
+       
+            <ProductItem 
+                item = { item } 
+                navigation = { navigation } /> }
+       
             showsVerticalScrollIndicator={false}
         />
     </View>
@@ -57,8 +56,11 @@ export default ItemListCategory
 
 const styles = StyleSheet.create({
     container: {
-         height: '90%',
+        height: '100%',
         backgroundColor: colores.marina,
-        alignItems: 'center'
-    }
+        alignItems: 'center',
+        paddingTop:10,
+       
+    },
+    
 } )

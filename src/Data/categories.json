@@ -1,8 +1,8 @@
 [
-    "Heladeras",
     "Aire-Acond",
     "Calefaccion",
     "Lavarropas",
+    "Heladeras",
     "Smartphones",
     "Laptops",
     "TV-Led",
@@ -10,6 +10,9 @@
     "Pequeños",
     "Decoracion del Hogar",
     "Impresoras",
-    "Freezer"
+    "Freezer",
+    "Jardineria",
+    "Accesorios",
+    "Otros"
 
 ]

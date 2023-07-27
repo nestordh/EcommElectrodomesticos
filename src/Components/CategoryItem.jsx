@@ -1,22 +1,26 @@
 import { Pressable, StyleSheet, Text, View, useWindowDimensions} from 'react-native'
 import React from 'react'
 import Card from './Card'
-
+import { useDispatch } from 'react-redux'
+import { setCategorySelected } from '../Features/Market/marketSlice'
 
 const CategoryItem = ( { item, navigation } ) => {
  
   const { width } = useWindowDimensions ()
-  
+  const dispatch = useDispatch()
+  const onSelectCategory = ( ) => {
+        dispatch(setCategorySelected(item))
+        navigation.navigate ( 'ItemListCategory', { category: item } )
+  }
+
   return (
+
     <View style = { styles.scrollView } >
-    {/* <View style = { { width: width, alignItems: 'center' } }> */}
-      
-      <Pressable onPress = { () => navigation.navigate ('ItemListCategory', { category: item } ) } >
+         
+      <Pressable onPress = { onSelectCategory } >
         
-            <Card additionalStyle = { styles.additionalStyle }>
-       
-                <Text style = { styles.textCategory } > { item } </Text>
-        
+            <Card additionalStyle = { styles.additionalStyle } >
+                  <Text style = { styles.textCategory } > { item } </Text>
             </Card>
       
       </Pressable>
@@ -38,8 +42,5 @@ const styles = StyleSheet.create({
     },
     additionalStyle:{ 
       borderRadius: 15
-    },
-    wrapper: {
-      width: '100%',
     },
 })
