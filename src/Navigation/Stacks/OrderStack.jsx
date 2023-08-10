@@ -12,11 +12,11 @@ const OrderStack = () => {
           initialRouteName = "OrderScreen"
           screenOptions = { ( { route, navigation } ) => ( {
             header: () => {
-              return <Header route = { route } navigation = { navigation } /> ;
+              return <Header route={route} navigation={navigation}/> ;
             },
           })}>
 
-          <Stack.Screen name = "OrderScreen" component = { OrderScreen } />
+          <Stack.Screen name = "Ordenes de compra" component={OrderScreen} />
      
       </Stack.Navigator>
   

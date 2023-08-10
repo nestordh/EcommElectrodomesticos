@@ -2,27 +2,50 @@ import { StyleSheet, Text, View, Pressable } from "react-native";
 import React from "react";
 import { colores } from "../Global/Colores";
 import { AntDesign } from "@expo/vector-icons";
+import { useDispatch, useSelector } from "react-redux";
+import { signOut } from "../Features/User/userSlice";
+import { SimpleLineIcons } from "@expo/vector-icons";
 
 const Header = ({ route, navigation }) => {
+  
   let title;
   if (route.name === "Home") title = "Home";
   else if (route.name === "ItemListCategory") title = route.params.category
   else if (route.name === "Detail") title = route.params.title
   else title = route.name
 
+    const dispatch = useDispatch();
+    const {email} = useSelector((state) => state.userReducer.value);
+
   return (
     <View style={styles.containerHeader}>
       
-      <Text style={styles.text}>{title}</Text>
-        {route.name !== "Home" ? (
+      <Text style={styles.text}> {title} </Text>
         
-          <Pressable style={styles.pressable}
-                     onPress={() => navigation.goBack()} 
-                     >
-              <AntDesign name="back" size= {30} color="black" />
-          </Pressable>    
+        {navigation.canGoBack() ? (
+        
+          <Pressable style={styles.back}
+                     onPress={() => navigation.goBack()} >
+
+              <AntDesign name="back" size= {25} color="black" />
+              <Text> Volver </Text>
+
+          </Pressable>  
+
       ) : null}
    
+      {email ? (
+                <Pressable
+                    style={styles.exit}
+                    onPress={() => dispatch(signOut())} >
+                   
+                  <SimpleLineIcons name="logout" size={25} color="black" />
+                  <Text> Salir </Text>
+                
+                </Pressable>
+
+            ) : null}
+
     </View>
   );
 };
@@ -31,19 +54,27 @@ export default Header;
 
 const styles = StyleSheet.create({
   containerHeader: {
-    backgroundColor: colores.Light,
+    backgroundColor: colores.fondo,
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
     paddingVertical: 15,
+    position: "relative",
+
   },
   text: {
     fontSize: 25,
     fontFamily: "Lobster",
   },
-  pressable: {
+  back: {
     position: "absolute",
     right: 30,
-    top: "50%",
-},
+    top: "20%",
+  },
+  exit: {
+    position: "absolute",
+    left: 30,
+    top: "20%",
+  },
+
 });

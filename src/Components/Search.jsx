@@ -7,7 +7,7 @@ import { colores } from '../Global/Colores';
 const Search = ( { onSearch, error = "" } ) => {
     
     const [ keyword, setKeyword ] = useState("")
-    const { width,} = useWindowDimensions()
+    const { width } = useWindowDimensions()
 
     const onErase = () => {
           setKeyword("")

@@ -5,5 +5,7 @@ export const colores = {
     marina: "#66cdaa",
     Light: "#FFFDE7",
     green: "green",
-    greensuave: "#bcf3d9"
+    greensuave: "#bcf3d9",
+    fondo: "#D0D3D4",
+    fondo2:"#D0D3D4",
 }

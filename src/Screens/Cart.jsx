@@ -1,14 +1,16 @@
 import { FlatList, Pressable, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import CartData from '../Data/cart.json'
 import CartItem from '../Components/CartItem';
 import { colores } from '../Global/Colores';
+import { useSelector } from 'react-redux';
+import { usePostCartMutation } from '../Services/shopServices';
 
 const Cart = () => {
+    const {items: CartData, total, updatedAt, user } = useSelector(state => state.cartReducer.value)
+    const [triggerPostCart, result ] = usePostCartMutation()
+    const onConfirm = ( ) => { triggerPostCart({items: CartData, total, user, updatedAt }) }
+    console.log(result);
     
-    const total = CartData.reduce((acc, currentItem) => acc += currentItem.price * currentItem.quantity, 0)
-    const ProdTot = CartData.reduce((tot, currentItem) => tot += currentItem.quantity, 0)
-
     return (
     <View style={styles.container}>
         
@@ -17,31 +19,27 @@ const Cart = () => {
             keyExtractor={cartItem => cartItem.id}
             renderItem={({item})=> {
                 return (
-                    <CartItem
-                        cartItem = {item} />
+                    <CartItem cartItem = {item} />
                 )
             }}
         />
 
         <View>
-                <View style={styles.totalContainer}>
+                {/* <View style={styles.totalContainer}>
                     
                     <Text style={styles.text} >  
                     Cantidad Productos: {ProdTot} </Text>
                 
-                </View>
+                </View> */}
 
                 <View style={styles.totalContainer1}>
                 
-                   
-                    <Text style={styles.text} > 
-                        Valor total: $ { total}
-                    </Text>
+                    <Text style={styles.text} > Valor total: $ { total} </Text>
 
-                    <Pressable>
-                        <Text style={styles.text1} >
-                            Confirmar compra
-                        </Text>
+                    <Pressable onPress={onConfirm} >
+
+                        <Text style={styles.text1} > Confirmar compra </Text>
+                        
                     </Pressable>
 
                 </View>
@@ -57,14 +55,14 @@ const styles = StyleSheet.create({
     container: {
         justifyContent: 'space-between',
         flex: 1,
-        backgroundColor: colores.palido,
+        backgroundColor: colores.fondo,
         height: "100%",
     },
-    totalContainer: {
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
+    // totalContainer: {
+    //     flexDirection: 'row',
+    //     justifyContent: 'center',
+    //     alignItems: 'center',
+    // },
     totalContainer1: {
         flexDirection: 'row',
         justifyContent: 'center',

@@ -2,222 +2,262 @@
   {
     "id": 1,
     "title": "RT38ngh",
-    "brand": "Samsung",
+    "description": "Heladera con freezer nofrost de 380 litros de capacidad",
     "price": 350,
+    "discountPercentage": 4.5,
+    "rating": 2.2,
+    "stock": 20,
+    "brand": "Samsung",
     "category": "Heladeras",
+    "thumbnail":"https://images.samsung.com/is/image/samsung/assets/ar/refrigerators/side_by_side140x140.png?$N_108_PNG$",
     "images": 
       [
         "https://images.samsung.com/is/image/samsung/assets/ar/refrigerators/side_by_side140x140.png?$N_108_PNG$",
         "https://images.samsung.com/is/image/samsung/assets/ar/refrigerators/side_by_side140x140.png?$N_108_PNG$"
-      ],
-    "stock": 20,
-    "description": "Heladera con freezer nofrost de 380 litros de capacidad",
-    "discountPercentage": 4.5,
-    "rating": 2.2,
-    "thumbnail":"https://images.samsung.com/is/image/samsung/assets/ar/refrigerators/side_by_side140x140.png?$N_108_PNG$",
-    "quantity": 2
+      ]
   },
   {
     "id": 2,
     "title": "AQ18fc",
+    "description": "Aire acon de 4500frig",
     "price": 650,
+    "discountPercentage": 4.5,
+    "rating": 2.2,
+    "stock": 15,
     "brand": "Samsung",
     "category": "Aire-Acond",
+    "thumbnail":"https://images.samsung.com/is/image/samsung/assets/ar/refrigerators/side_by_side140x140.png?$N_108_PNG$",
     "images": 
       [
         "https://venred.s3.amazonaws.com/samsung/specslatin/products/sku/465/AC1.png",
         "https://samsungar.vtexassets.com/arquivos/ids/175929-320-332/Samsung-93551302-ar-wall-mount-ar5000hm-401480-ar12ashqawk-bg-488836391Download-Source.png?v=637711194272400000",
         "https://samsungar.vtexassets.com/arquivos/ids/175929-320-332/Samsung-93551302-ar-wall-mount-ar5000hm-401480-ar12ashqawk-bg-488836391Download-Source.png?v=637711194272400000"
-      ],
-    "stock": 15,
-    "description": "Aire acon de 4500frig"
+      ]
   },
   {
     "id": 3,
     "title": "wm22bbg",
-    "price": 330,
-    "category": "Lavarropas",
-    "images": 
-    [
-      "https://images.samsung.com/is/image/samsung/ar-ww65m0nhuu-ww65m0nhuu-xbg-kg-149287375?$650_519_PNG$",
-      "https://samsungar.vtexassets.com/arquivos/ids/182447-320-332/WD90T4046BE-ED_001_Front_White.png?v=637889273594970000"
-    ],
-    "stock": 20,
     "description": "Whash machine 12kg capacity",
-    "brand": "Samsung"
+    "price": 330,
+    "discountPercentage": 4.5,
+    "rating": 2.2,
+    "stock": 15,
+    "brand": "Samsung",
+    "category": "Lavarropas",
+    "thumbnail":"https://images.samsung.com/is/image/samsung/assets/ar/refrigerators/side_by_side140x140.png?$N_108_PNG$",
+    "images": 
+      [
+        "https://images.samsung.com/is/image/samsung/ar-ww65m0nhuu-ww65m0nhuu-xbg-kg-149287375?$650_519_PNG$",
+        "https://samsungar.vtexassets.com/arquivos/ids/182447-320-332/WD90T4046BE-ED_001_Front_White.png?v=637889273594970000"
+      ]
   },
   {
     "id": 4,
     "title": "RT42vgn",
+    "description": "Refrigerador c/freezer",
     "price": 350,
+    "discountPercentage": 4.5,
+    "rating": 2.2,
+    "stock": 20,
+    "brand":"Samsung",
     "category": "Heladeras",
+    "thumbnail": "https://images.samsung.com/is/image/samsung/ar-rt29k577js8b3-rt29k577js8-b3-frontsilver-312234036?$650_519_PNG$", 
     "images":
     [
        "https://images.samsung.com/is/image/samsung/ar-rt29k577js8b3-rt29k577js8-b3-frontsilver-312234036?$650_519_PNG$",
        "https://samsungar.vtexassets.com/arquivos/ids/184195-320-332/Samsung-69926089-ar-rt38k5932sl-rt38k5932sl-b3-frontsilver-83969683Download-Source.png?v=637987594697470000"
-    ],
-    "stock": 20,
-    "description": "Refigerator",
-    "brand":"Samsung"
-      },
+    ]
+  },
   {
     "id": 5,
     "title": "wm120mvh",
+    "description": "Wash Machine",
     "price" : 515,
+    "discountPercentage": 4.5,
+    "rating": 2.2,
+    "stock": 20,
+    "brand":"Samsung",
     "category": "Lavarropas",
+    "thumbnail": "https://images.samsung.com/is/image/samsung/ar-ww65m0nhuu-ww65m0nhuu-xbg-kg-149287375?$650_519_PNG$",
     "images":
     [
        "https://images.samsung.com/is/image/samsung/ar-ww65m0nhuu-ww65m0nhuu-xbg-kg-149287375?$650_519_PNG$",
        "https://samsungar.vtexassets.com/arquivos/ids/185555-320-332/Samsung-112332839-ar-washer-ww80j5446fwle-437891-ww70aa046bxubg-533939880--Download-Source--zoom.jpg?v=638025666365870000"
-    ],
-    "stock": 20,
-    "description": "Wash Machine",
-    "brand":"Samsung"
+    ]
   },
   {
     "id": 6,
     "title": "RT38ngh",
+    "description": "Refrigerator No-frost",
     "price": 350,
+    "discountPercentage": 4.5,
+    "rating": 2.2,
+    "stock": 20,
+    "brand":"Samsung",
     "category": "Heladeras",
+    "thumbnail": "https://static.vecteezy.com/system/resources/previews/011/098/642/original/modern-gray-refrigerator-illustration-vector-design-on-transparent-background-free-png.png",
     "images":
     [
        "https://static.vecteezy.com/system/resources/previews/011/098/642/original/modern-gray-refrigerator-illustration-vector-design-on-transparent-background-free-png.png",
        "https://samsungar.vtexassets.com/arquivos/ids/184714-320-332/RB33A3070WP-BG_001_Front.jpg?v=638004860826130000"
-    ],
-
-    "stock": 20,
-    "description": "Refrigerator No-frost",
-    "brand":"Samsung"
+    ]
   },
   {
     "id": 7,
     "title": "smt28ggh",
+    "description": "Celular Smart",
     "price": 350,
+    "discountPercentage": 4.5,
+    "rating": 2.2,
+    "stock": 20,
+    "brand":"Samsung",
     "category": "Smartphones",
+    "thumbnail":"https://cdn.pixabay.com/photo/2021/05/14/11/18/celular-6253137_640.png",
     "images": 
     [
       "https://cdn.pixabay.com/photo/2021/05/14/11/18/celular-6253137_640.png",
       "https://samsungar.vtexassets.com/arquivos/ids/184374-320-332/ZFOLD-BLACK.png?v=637993849499130000",
       "https://samsungar.vtexassets.com/arquivos/ids/184374-320-332/ZFOLD-BLACK.png?v=637993849499130000"
-      ],
-    "stock": 20,
-    "description": "Celular Smart",
-    "brand":"Samsung"
+      ]
   },
   {
     "id": 8,
     "title": "AQ12hnd",
+    "description": "Aire acond 3500 watt (3000Frig) Frio-Calor Tegnologia Inverter",
     "price": 550,
+    "discountPercentage": 4.5,
+    "rating": 2.2,
+    "stock": 20,
+    "brand":"Samsung",
     "category": "Aire-Acond",
+    "thumbnail":"https://cdnx.jumpseller.com/prueba-hogar/image/23051848/resize/610/610?1649167958",
     "images": 
     [
       "https://cdnx.jumpseller.com/prueba-hogar/image/23051848/resize/610/610?1649167958",
       "https://samsungar.vtexassets.com/arquivos/ids/175943-320-332/Samsung-93551302-ar-wall-mount-ar5000hm-401480-ar12ashqawk-bg-488836391Download-Source.png?v=637711197448530000"
-    ],
-    "stock": 20,
-    "description": "Aire acond 3500 watt (3000Frig) Frio-Calor Tegnologia Inverter",
-    "brand":"Samsung"
+    ]    
   },
   {
     "id": 9,
     "title": "led55ukh",
+    "description": "Tv LED 55 Pulgadas",
     "price": 700,
+    "discountPercentage": 4.5,
+    "rating": 2.2,
+    "stock": 20,
+    "brand":"Samsung",
     "category": "TV-Led",
+    "thumbnail":"https://www.pngall.com/wp-content/uploads/5/Full-HD-LED-TV-PNG-Free-Download.png",
     "images": 
     [ 
        "https://www.pngall.com/wp-content/uploads/5/Full-HD-LED-TV-PNG-Free-Download.png",
        "https://samsungar.vtexassets.com/arquivos/ids/181442-320-332/Q80A_01.jpg?v=638048283388930000"
-  ],
-    "stock": 20,
-    "description": "Tv LED 55 Pulgadas",
-    "brand":"Samsung"
+    ]
   },
   {
     "id": 10,
     "title": "smh30jbg/xbg",
+    "description": "Celular Smart",
     "price": 160,
+    "discountPercentage": 4.5,
+    "rating": 2.2,
+    "stock": 20,
+    "brand":"Samsung",
     "category": "Smartphones",
+    "thumbnail":"https://samsungar.vtexassets.com/arquivos/ids/184306-320-332/ZFLIP-BLUE.png?v=637992955559000000",
     "images": 
     [
       "https://especiales.dinero.com/top-of-mind-colombia-2020/imagenes/top-of-mind-adultos-telefonos-celulares.png",
       "https://static.vecteezy.com/system/resources/thumbnails/024/096/986/small/smartphone-device-technology-free-png.png",
       "https://samsungar.vtexassets.com/arquivos/ids/184306-320-332/ZFLIP-BLUE.png?v=637992955559000000",
       "https://samsungar.vtexassets.com/arquivos/ids/184306-320-332/ZFLIP-BLUE.png?v=637992955559000000"
-    ],
-    "stock": 20,
-    "description": "Celular Smart",
-    "brand":"Samsung"
+    ]
   },
   {
     "id": 11,
     "title": "ww75bbh",
+    "description": "Lavarropas de 6kg de capacidad de lavado ",
     "price": 410,
+    "discountPercentage": 4.5,
+    "rating": 2.2,
+    "stock": 20,
+    "brand":"Samsung",
     "category": "Lavarropas",
+    "thumbnail":"https://samsungar.vtexassets.com/arquivos/ids/184837-320-332/WW4100--SILVER-FRONT.jpg?v=63800750315520000",
     "images":
      [
       "https://images.samsung.com/is/image/samsung/p6pim/ar/ww65a40000subg/gallery/ar-ww4000j-437532-ww65a40000subg-533902658?$650_519_PNG$",
       "https://samsungar.vtexassets.com/arquivos/ids/184837-320-332/WW4100--SILVER-FRONT.jpg?v=638007503155200000"
-    ],
-    "stock": 20,
-    "description": "lavarropas de 6kg de capacidad de lavado ",
-    "brand":"Samsung"
+    ]
   },
-  {
+   {
     "id": 12,
     "title": "smh30efg",
+    "description": "Celular Smart",
     "price": 160,
+    "discountPercentage": 4.5,
+    "rating": 2.2,
+    "stock": 20,
+    "brand":"Samsung",
     "category": "Smartphones",
+    "thumbnail":"https://samsungar.vtexassets.com/arquivos/ids/184306-320-332/ZFLIP-BLUE.png?v=637992955559000000",
     "images":
     [
       "https://static.vecteezy.com/system/resources/previews/009/665/479/original/green-screen-notch-display-smartphone-clip-art-illustration-technology-free-png.png",
       "https://samsungar.vtexassets.com/arquivos/ids/184306-320-332/ZFLIP-BLUE.png?v=637992955559000000"
-    ],
-    "stock": 20,
-    "description": "Celular Smart",
-    "brand":"Samsung"
+    ]
   },
   {
     "id": 13,
     "title": "ww78gtbh",
+    "description": "Lavarropa automatico",
     "price": 410,
+    "discountPercentage": 4.5,
+    "rating": 2.2,
+    "stock": 20,
+    "brand":"Samsung",
     "category": "Lavarropas",
+    "thumbnail":"https://samsungar.vtexassets.com/arquivos/ids/184837-320-332/WW4100--SILVER-FRONT.jpg?v=638007503155200000",
     "images":
     [
       "https://www.openfactory.com.ar/wp-content/uploads/M11_55L_7kg_WO_W_-_Cam_G4.png",
       "https://samsungar.vtexassets.com/arquivos/ids/184837-320-332/WW4100--SILVER-FRONT.jpg?v=638007503155200000"
-    ],
-    "stock": 20,
-    "description": "",
-    "brand":"Samsung"
+    ]
    },
-  {
+   {
     "id": 14,
     "title": "smh30efg",
+    "description": "Celular Smart",
     "price": 160,
+    "discountPercentage": 4.5,
+    "rating": 2.2,
+    "stock": 20,
+    "brand":"Samsung",
     "category": "Smartphones",
+    "thumbnail":"https://samsungar.vtexassets.com/arquivos/ids/184306-320-332/ZFLIP-BLUE.png?v=637992955559000000",
     "images": 
     [
       "https://www.meuinfinix.com.br/arquivos/info-freefire-apresentacao-celular.png?v=638065508957230000",
       "https://samsungar.vtexassets.com/arquivos/ids/184306-320-332/ZFLIP-BLUE.png?v=637992955559000000"
-    ],
-    "stock": 20,
-    "description": "Celular Smart",
-    "brand":"Samsung"
+    ]
   },
   {
     "id": 15,
     "title": "WM70mmv/xbg",
+    "description": "Whash machine 10kg capacity",
     "price": 410,
+    "discountPercentage": 4.5,
+    "rating": 2.2,
+    "stock": 20,
+    "brand":"Samsung",
     "category": "Lavarropas",
+    "thumbnail":"https://images.fravega.com/f300/0123209da11e8557eb184caeafb184a2.png",
     "images":
     [
       "https://images.fravega.com/f300/0123209da11e8557eb184caeafb184a2.png",
       "https://samsungar.vtexassets.com/arquivos/ids/184837-320-332/WW4100--SILVER-FRONT.jpg?v=638007503155200000"
-    ],
-    "stock": 20,
-    "description": "Whash machine 10kg capacity",
-    "brand":"Samsung"
-  },
+    ]
+},
 {
   "id": 16,
   "title": "iPhone 9",
@@ -242,7 +282,7 @@
   "title": "iPhone X",
   "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
   "price": 899,
-  "discountPercentage": 17.94,
+  "discountPercentage": 1794,
   "rating": 4.44,
   "stock": 34,
   "brand": "Apple",
@@ -260,8 +300,8 @@
   "title": "Samsung Universe 9",
   "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
   "price": 1249,
-  "discountPercentage": 15.46,
-  "rating": 4.09,
+  "discountPercentage": 1546,
+  "rating": 409,
   "stock": 36,
   "brand": "Samsung",
   "category": "Smartphones",
@@ -407,7 +447,7 @@
   "rating": 4.44,
   "stock": 7,
   "brand": "luxury palace",
-  "category": "Decoracion del Hogar",
+  "category":"Decoracion",
   "thumbnail": "https://i.dummyjson.com/data/products/29/thumbnail.webp",
   "images": [
     "https://i.dummyjson.com/data/products/29/1.jpg",
@@ -426,7 +466,7 @@
   "rating": 4.92,
   "stock": 54,
   "brand": "Golden",
-  "category": "Decoracion del Hogar",
+  "category": "Decoracion",
   "thumbnail": "https://i.dummyjson.com/data/products/30/thumbnail.jpg",
   "images": [
       "https://i.dummyjson.com/data/products/30/1.jpg",
@@ -438,44 +478,53 @@
 {
   "id": 28,
   "title": "RT44hjl/vgh",
+  "description": "Refrigerator solo sin freezerNo-frost ",
   "price": 390,
+  "discountPercentage": 4.15,
+  "rating": 4.25,
+  "stock": 20,
+  "brand":"Samsung",
   "category": "Heladeras",
+  "thumbnail":"",
   "images":
   [
      "https://vondom.com.ar/cdn/shop/products/HEL170_3_1400x.png?v=1659467414",
      "https://samsungar.vtexassets.com/arquivos/ids/184714-320-332/RB33A3070WP-BG_001_Front.jpg?v=638004860826130000"
-  ],
-  "stock": 20,
-  "description": "Refrigerator solo sin freezerNo-frost ",
-  "brand":"Samsung"
+  ]
 },
 {
   "id": 29,
   "title": "AQ09tgd/xbg",
+  "description": "Aire acond 3500 watt (3000Frig) Frio-Calor Tegnologia Inverter",
   "price": 950,
+  "discountPercentage": 4.15,
+  "rating": 4.25,
+  "stock": 20,
+  "brand":"Samsung",
   "category": "Aire-Acond",
+  "thumbnail":"",
   "images": 
   [
     "https://www.icsolucionselectriques.com/wp-content/uploads/2016/09/aire-acondicionado.png",
     "https://samsungar.vtexassets.com/arquivos/ids/175943-320-332/Samsung-93551302-ar-wall-mount-ar5000hm-401480-ar12ashqawk-bg-488836391Download-Source.png?v=637711197448530000"
-  ],
-  "stock": 20,
-  "description": "Aire acond 3500 watt (3000Frig) Frio-Calor Tegnologia Inverter",
-  "brand":"Samsung"
+  ]
 },
 {
   "id": 30,
   "title": "AQ12tgd/xbg",
+  "description": "Aire acond 3500 watt (3000Frig) Frio-Calor Tegnologia Inverter",
   "price": 1050,
+  "discountPercentage": 4.15,
+  "rating": 4.25,
+  "stock": 20,
+  "brand":"Samsung",
   "category": "Aire-Acond",
+  "thumbnail":"",
   "images": 
   [
     "https://www.icsolucionselectriques.com/wp-content/uploads/2016/09/aire-acondicionado.png",
     "https://samsungar.vtexassets.com/arquivos/ids/175943-320-332/Samsung-93551302-ar-wall-mount-ar5000hm-401480-ar12ashqawk-bg-488836391Download-Source.png?v=637711197448530000"
-  ],
-  "stock": 20,
-  "description": "Aire acond 3500 watt (3000Frig) Frio-Calor Tegnologia Inverter",
-  "brand":"Samsung"
+  ]
 },
 {
   "id": 31,
@@ -499,171 +548,256 @@
 {
   "id": 32,
   "title": "led65udh",
+  "description":"Tv LED 65 Pulgadas",
   "price": 700,
-  "category": "TV-Led",
+  "discountPercentage": 4.15,
+  "rating": 4.25,
+  "stock": 20,
+  "brand":"Samsung",
+  "category":"TV-Led",
+  "thumbnail":"",
   "images": 
   [ 
      "https://freepngimg.com/save/51966-led-television-image-free-download-png-hq/1500x1500",
      "https://samsungar.vtexassets.com/arquivos/ids/181442-320-332/Q80A_01.jpg?v=638048283388930000"
-],
-  "stock": 20,
-  "description": "Tv LED 65 Pulgadas",
-  "brand":"Samsung"
+]
 },
 {
   "id": 33,
   "title": "led55Uuf/xbv",
+  "description": "Tv LED 55 Pulgadas",
   "price": 700,
+  "discountPercentage": 4.15,
+  "rating": 4.25,
+  "stock": 20,
+  "brand":"Samsung",
   "category": "TV-Led",
+  "thumbnail":"",
   "images": 
   [ 
      "https://freepngimg.com/save/52653-led-television-free-png-hq/650x650",
      "https://samsungar.vtexassets.com/arquivos/ids/181442-320-332/Q80A_01.jpg?v=638048283388930000"
-],
-  "stock": 20,
-  "description": "Tv LED 55 Pulgadas",
-  "brand":"Samsung"
+  ]
 },
 {
   "id": 34,
   "title": "led75mhy/xbv",
+  "description": "Tv LED 75 Pulgadas",
   "price": 1100,
+  "discountPercentage": 4.15,
+  "rating": 4.25,
+  "stock": 20,
+  "brand":"Samsung",
   "category": "TV-Led",
+  "thumbnail":"",
   "images": 
   [ 
      "https://www.pngmart.com/files/7/LED-Television-PNG-Free-Download.png",
      "https://samsungar.vtexassets.com/arquivos/ids/181442-320-332/Q80A_01.jpg?v=638048283388930000"
-],
-  "stock": 20,
-  "description": "Tv LED 75 Pulgadas",
-  "brand":"Samsung"
+]
 },
 {
   "id": 35,
   "title": "Fgt 34vmn",
+  "description": "Freezer vertical de 340litros ",
   "price": 1100,
+  "discountPercentage": 4.15,
+  "rating": 4.25,
+  "stock": 5,
+  "brand":"Whirpool",
   "category": "Freezer",
+  "thumbnail":"",
   "images": 
   [ 
     "https://storage.beko.co.uk/blomberg2018products/large/FNT3454i%20Front%20Open.png",
      "https://kitchenaid-h.assetsadobe.com/is/image/content/dam/global/maytag/refrigeration/freezer/images/hero-MZF34X20DW.tif?&fmt=png-alpha&resMode=sharp2&wid=850&hei=850"
-],
-  "stock": 5,
-  "description": "Freezer vertical de 340litros ",
-  "brand":"Whirpool"
+]
 },
 {
   "id": 36,
   "title": "freezer 750hy/xbv",
+  "description": "Freezer horizontal de 750litros 2 puertas color azul",
   "price": 1100,
+  "discountPercentage": 4.15,
+  "rating": 4.25,
+  "stock": 20,
+  "brand":"Sunny",
   "category": "Freezer",
+  "thumbnail":"",
   "images": 
   [ 
      "https://www.genbiotech.net/image/cache/Haier/W020140523535191526640-600x315w.png",
      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF-YnO4_ux9tHnEJlniQikjwRM7vcd4Bb2mjZtBKLQOoR1FCEkhnYaiOdC1nH2x6QGF18&usqp=CAU"
-],
-  "stock": 20,
-  "description": "Freezer horizontal de 750litros 2 puertas color azul",
-  "brand":"Sunny"
+  ]
 },
 {
   "id": 37,
   "title": "aud45xbv",
+  "description": "Equipo de audio reproductor musica",
   "price": 100,
+  "discountPercentage": 4.15,
+  "rating": 4.25,
+  "stock": 20,
+  "brand":"Samsung",
   "category": "Audio",
+  "thumbnail":"",
   "images": 
   [ 
      "https://images.samsung.com/is/image/samsung/latin_MX-F630-ZP_510_Front_black?$624_624_PNG$",
      "https://images.samsung.com/is/image/samsung/latin_MX-F630-ZP_510_Front_black?$624_624_PNG$"
-],
-  "stock": 20,
-  "description": "Equipo de audio reproductor musica",
-  "brand":"Samsung"
+]
 },
 {
   "id": 38,
   "title": "fbm90fg/xbv",
+  "description": "Freezer de 90litros Bajo mesada nofrost 1 cajon 2 estantes",
   "price": 800,
+  "discountPercentage": 4.15,
+  "rating": 4.25,
+  "stock": 20,
+  "brand":"conns",
   "category": "Freezer",
+  "thumbnail":"",
   "images": 
   [ 
      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMNwNQUg20c_YzmtIdhgFsiel_tij5idz8Ag&usqp=CAU",
      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnq01wDh2NZNWwWyNnYSbZ49lGDrvn28EZUFVr0c0Ak8jtCi_z6AXO3HRy8EK1NBQVhO0&usqp=CAU"
-],
-  "stock": 20,
-  "description": "Freezer de 90litros Bajo mesada nofrost 1 cajon 2 estantes",
-  "brand":"conns"
+]
 },
-
 {
   "id": 39,
   "title": "Plancha 45hj",
-  "price": 1100,
-  "category": "Pequeños",
+  "description": "Plancha Electrica de 450w de potencia",
+  "price": 750,
+  "discountPercentage": 4.15,
+  "rating": 4.25,
+  "stock": 20,
+  "brand":"Peabody",
+  "category": "Electro",
+  "thumbnail":"",
   "images": 
   [ 
      "https://e7.pngegg.com/pngimages/635/527/png-clipart-clothes-iron-ironing-iron-electronics-image-file-formats.png",
      "https://e7.pngegg.com/pngimages/186/74/png-clipart-clothes-iron-digital-small-appliance-plancha-photography-sticker.png"
-],
-  "stock": 20,
-  "description": "Tv LED 75 Pulgadas",
-  "brand":"Samsung"
+]
 },
-
 {
   "id": 40,
-  "title": "Plancha 45hj",
+  "title": "Plancha 55hj",
+  "description": "Plancha Electrica de 550w de potencia",
   "price": 1100,
-  "category": "Pequeños",
+  "discountPercentage": 4.15,
+  "rating": 4.25,
+  "stock": 20,
+  "brand":"Samsung",
+  "category": "Electro",
+  "thumbnail":"",
   "images": 
   [ 
      "https://e7.pngegg.com/pngimages/635/527/png-clipart-clothes-iron-ironing-iron-electronics-image-file-formats.png",
      "https://e7.pngegg.com/pngimages/186/74/png-clipart-clothes-iron-digital-small-appliance-plancha-photography-sticker.png"
-],
-  "stock": 20,
-  "description": "Tv LED 75 Pulgadas",
-  "brand":"Samsung"
+]
 },
 {
   "id": 41,
   "title": "estufa de jardin a leños ",
+  "description": "Estufa para jardin cerrado a leños",
   "price": 2500,
+  "discountPercentage": 4.15,
+  "rating": 4.25,
+  "stock": 8,
+  "brand":"Garden",
   "category": "Calefaccion",
+  "thumbnail":"",
   "images": 
   [ 
      "https://www.elmaitenmuebles.com.ar/EM/imagenes/calefaccion/natural/estufas/pam900-800x600.webp",
      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN0XgR5biag1auvh-IBWezoPyszOHYFq2wNw&usqp=CAU"
-],
-  "stock": 8,
-  "description": "Estufa para jardin cerrado a leños",
-  "brand":"Garden"
+]
 },
 {
   "id": 42,
   "title": "Impresora Laser jet45rt ",
+  "description": "impresora Laser color compacta",
   "price": 1580,
+  "discountPercentage": 4.15,
+  "rating": 4.25,
+  "stock": 5,
+  "brand":"impjet",
   "category": "Impresoras",
+  "thumbnail":"",
   "images": 
   [ 
      "https://cdn.pixabay.com/photo/2013/07/12/15/23/laser-printer-149815_640.png",
      "https://cdn.pixabay.com/photo/2013/07/12/15/23/laser-printer-149815_640.png"
-],
-  "stock": 5,
-  "description": "impresora Laser color compacta",
-  "brand":"impjet"
+]
 },
 {
   "id": 43,
   "title": "wm120mvh",
+  "description": "Wash Machine",
   "price" : 515,
+  "discountPercentage": 4.15,
+  "rating": 4.25,
+  "stock": 20,
+  "brand":"Samsung",
   "category": "Lavarropas",
+  "thumbnail":"",
   "images":
   [
      "https://images.samsung.com/is/image/samsung/ar-ww65m0nhuu-ww65m0nhuu-xbg-kg-149287375?$650_519_PNG$",
      "https://samsungar.vtexassets.com/arquivos/ids/185555-320-332/Samsung-112332839-ar-washer-ww80j5446fwle-437891-ww70aa046bxubg-533939880--Download-Source--zoom.jpg?v=638025666365870000"
-  ],
+  ]
+},
+{
+  "id": 44,
+  "title": "aft66vh",
+  "description": "Afeitadora MAnual",
+  "price" : 515,
+  "discountPercentage": 4.15,
+  "rating": 4.25,
   "stock": 20,
-  "description": "Wash Machine",
-  "brand":"Samsung"
+  "brand":"Brounw",
+  "category": "Otros",
+  "thumbnail":"",
+  "images":
+  [
+     "https://images.samsung.com/is/image/samsung/ar-ww65m0nhuu-ww65m0nhuu-xbg-kg-149287375?$650_519_PNG$",
+     "https://samsungar.vtexassets.com/arquivos/ids/185555-320-332/Samsung-112332839-ar-washer-ww80j5446fwle-437891-ww70aa046bxubg-533939880--Download-Source--zoom.jpg?v=638025666365870000"
+  ]
+},
+{
+  "id": 45,
+  "title": "cuclillas aft66",
+  "description": "Cuchillas para afetadora",
+  "price" : 15,
+  "discountPercentage": 4.15,
+  "rating": 4.25,
+  "stock": 20,
+  "brand":"Brounw",
+  "category": "Accesorios",
+  "thumbnail":"",
+  "images":
+  [
+     "https://images.samsung.com/is/image/samsung/ar-ww65m0nhuu-ww65m0nhuu-xbg-kg-149287375?$650_519_PNG$",
+     "https://samsungar.vtexassets.com/arquivos/ids/185555-320-332/Samsung-112332839-ar-washer-ww80j5446fwle-437891-ww70aa046bxubg-533939880--Download-Source--zoom.jpg?v=638025666365870000"
+  ]
+},
+{
+  "id": 46,
+  "title": "conservadora",
+  "description": "Conservadora de bebidas 15litros",
+  "price" : 115,
+  "discountPercentage": 0.15,
+  "rating": 4.25,
+  "stock": 20,
+  "brand":"Garden",
+  "category": "Otros",
+  "thumbnail":"",
+  "images":
+  [
+     "https://images.samsung.com/is/image/samsung/ar-ww65m0nhuu-ww65m0nhuu-xbg-kg-149287375?$650_519_PNG$",
+     "https://samsungar.vtexassets.com/arquivos/ids/185555-320-332/Samsung-112332839-ar-washer-ww80j5446fwle-437891-ww70aa046bxubg-533939880--Download-Source--zoom.jpg?v=638025666365870000"
+  ]
 }
 ]

@@ -4,19 +4,20 @@ import OrderData from "../Data/orders.json"
 import OrderItem from '../Components/OrderItem'
 
 const OrderScreen = () => {
+  
   return (
     <View>
+        
         <FlatList
-            data = { OrderData }
-            keyExtractor = { orderItem => orderItem.id }
-            renderItem = { ( { item } ) => {
+            data={OrderData}
+            keyExtractor={orderItem => orderItem.id}
+            renderItem={({item})=> {
                 return (
-                    <OrderItem 
-                        order = { item }
-                    />              
+                    <OrderItem order = {item} />              
                 )
             } }
         />
+
     </View>
   )
 }

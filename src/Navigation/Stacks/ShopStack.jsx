@@ -19,11 +19,11 @@ const ShopStack = () => {
           },
         })}
     >
-      <Stack.Screen name="Mi tienda" component={Home} />
+      <Stack.Screen name="Tienda" component={Home} />
      
       <Stack.Screen name="ItemListCategory" component={ItemListCategory} />
      
-      <Stack.Screen name="Detail" component={ItemDetail} />
+      <Stack.Screen name="Detalles" component={ItemDetail} />
     
     </Stack.Navigator>
   

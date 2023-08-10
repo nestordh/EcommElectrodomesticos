@@ -2,13 +2,12 @@ import { StyleSheet, Text, Image, useWindowDimensions, Pressable } from 'react-n
 import React from 'react'
 import Card from './Card'
 import { colores } from '../Global/Colores'
-import { useDispatch } from 'react-redux'
 
 const ProductItem = ( { item, navigation }) => {
   
   const  { height, width }  = useWindowDimensions();
-  const dispatch = useDispatch()
-  const onSelect = () => { navigation.navigate ( 'Detail', { productId: item.id, title: item.title } ) }
+ 
+  const onSelect = (id) => { navigation.navigate ( 'Detail', { productId: item.id, title: item.title } ) }
 
   return (
     <Pressable onPress={() => onSelect(item.id)}>  

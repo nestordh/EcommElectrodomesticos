@@ -2,10 +2,13 @@ import { StyleSheet, View } from 'react-native'
 import React from 'react'
 import { colores } from '../Global/Colores'
 
-const Card = ({children, additionalStyle =[]}) => {
+const Card = ( { children, additionalStyle =[] } ) => {
   return (
-    <View style = { [ styles.cardContainer, additionalStyle ] } >
+
+    <View style = { [ styles.cardContainer, additionalStyle ] }>
+
         {children}
+
     </View>
   )
 }

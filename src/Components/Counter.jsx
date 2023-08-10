@@ -1,17 +1,16 @@
 import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import React, { useState } from "react";
 import { colores } from "../Global/Colores";
-
 import { useDispatch, useSelector } from "react-redux";
 import { increment, decrement, incrementByAmount, reset} from "../Features/Counter/counterSlice";
 
 const Counter = () => {
     
-    const [inputToAdd, setInputToAdd] = useState(0);
+    const [inputToAdd, setInputToAdd] = useState('0');
 
     const dispatch = useDispatch()
 
-    const count = useSelector(state => state.counterReducer.value)
+    const count = useSelector(state => state.counterReducer.value )
 
     return (
         <View style={styles.container}>
@@ -34,10 +33,10 @@ const Counter = () => {
             
             <View style={styles.buttonsContainer2}>
                 <TextInput
-                    placeholder = "Cant a sumar "
+                    placeholder = "Cant a aumentar "
                     style = { styles.spanInput }
                     onChangeText = { setInputToAdd }
-                    value = { inputToAdd } />
+                    value = { inputToAdd.toString() } />
         
                 <Pressable 
                     style={styles.button2}

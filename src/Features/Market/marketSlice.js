@@ -9,9 +9,7 @@ export const marketSlice = createSlice({
             idSelected: "",
             allProducts: Products,
             productsSelected: [],
-            productSelected: {},
-        }
-    },
+     } },
   
     reducers: {
         setCategorySelected: (state, action) => {
@@ -19,12 +17,12 @@ export const marketSlice = createSlice({
             state.value.categorySelected = action.payload
         },
         setIdSelected: (state,action) => {
-            state.value.idSelected = state.value.allProducts.find( product => product.category.item  === action.payload)
             state.value.idSelected = action.payload
-        },
-
+        }
     }
 })
 
-export const {setCategorySelected, setIdSelected, } = marketSlice.actions
+export const {setCategorySelected, setIdSelected } = marketSlice.actions
 export default marketSlice.reducer
+
+

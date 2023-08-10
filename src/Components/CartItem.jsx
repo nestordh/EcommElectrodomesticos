@@ -4,16 +4,22 @@ import { colores } from "../Global/Colores";
 import { Entypo } from "@expo/vector-icons";
 
 const CartItem = ({ cartItem }) => {
-    console.log(cartItem);
+         console.log(cartItem);
     return (
+        
         <View style={styles.card} onPress={() => {}}>
+            
             <View style={styles.textContainer}>
+               
                 <Text style={styles.text}> {cartItem.title} </Text>
                 <Text style = {styles.text2}> (Cantidad:  {cartItem.quantity}) </Text>
                 <Text style={styles.text2}> {cartItem.brand}</Text>
                 <Text style={styles.text2}> Precio x unidad:  ${cartItem.price}</Text>
+            
             </View>
+           
             <Entypo name="trash" size={30} color="green" />
+       
         </View>
     );
 };
@@ -23,7 +29,7 @@ export default CartItem;
 const styles = StyleSheet.create({
     card: {
         height: 100,
-        backgroundColor: colores.Light,
+        backgroundColor: colores.fondo,
         padding: 10,
         margin: 10,
         borderWidth: 2,
@@ -45,7 +51,7 @@ const styles = StyleSheet.create({
         color: "green",
     },
     text2: {
-        fontFamily: "Noto-sans",
+        fontFamily: "Noto-Sans",
         fontSize: 14,
         color: "gray",
     },

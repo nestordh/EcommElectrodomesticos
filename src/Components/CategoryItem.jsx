@@ -6,9 +6,11 @@ import { setCategorySelected } from '../Features/Market/marketSlice'
 
 const CategoryItem = ( { item, navigation } ) => {
  
-  const { width } = useWindowDimensions ()
+  const { width } = useWindowDimensions()
+  
   const dispatch = useDispatch()
-  const onSelectCategory = ( ) => {
+  
+  const onSelectCategory = () => {
         dispatch(setCategorySelected(item))
         navigation.navigate ( 'ItemListCategory', { category: item } )
   }
@@ -20,12 +22,14 @@ const CategoryItem = ( { item, navigation } ) => {
       <Pressable onPress = { onSelectCategory } >
         
             <Card additionalStyle = { styles.additionalStyle } >
+                  
                   <Text style = { styles.textCategory } > { item } </Text>
+            
             </Card>
       
       </Pressable>
     
-     </View>
+    </View>
   )
 }
 
