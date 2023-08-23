@@ -5,22 +5,46 @@ import { colores } from '../Global/Colores'
 // import { Entypo } from '@expo/vector-icons';
 import { FontAwesome, FontAwesome5, Ionicons, Entypo } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import React from 'react'
+import React, { useEffect } from 'react'
 import Footer from '../Components/Footer'
 import ShopStack from './Stacks/ShopStack'
 import CartStack from './Stacks/CartStack'
 import OrderStack from './Stacks/OrderStack';
 import AuthStack from './Stacks/AuthStack';
 import MyProfileStack from './Stacks/MyProfileStack';
-import { useSelector } from 'react-redux';
-
+import { useDispatch, useSelector } from 'react-redux';
+import { getSession } from '../SQLite';
+import { setUser } from '../Features/User/userSlice';
 
 
 const Tab = createBottomTabNavigator()
 
 const Navigator = () => {
 
-  const {email} = useSelector(state => state.userReducer.value)
+  const {email, localId} = useSelector((state) => state.userReducer.value);
+
+  const dispatch = useDispatch()
+
+  //Get stored sessions
+  useEffect( () => {
+      (async () => {
+          try {
+              console.log('Getting session...');
+              const session = await getSession()
+              console.log('Sesion: ');
+              console.log(session);
+              if (session?.rows.length) {
+                  const user = session.rows._array[0]
+                  dispatch(setUser(user))
+              }
+          } catch (error) {
+              console.log('Error getting session');
+              console.log(error.message);
+          }
+      })()
+  }, [])
+
+
 
   return (
    
