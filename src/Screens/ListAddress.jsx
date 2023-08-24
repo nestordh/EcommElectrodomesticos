@@ -40,8 +40,6 @@ const styles = StyleSheet.create({
         backgroundColor: colores.Light,
         width: "100%",
         height:"100%",
-        // padding: 20,
-
     },
     text: {
         paddingVertical: 20,

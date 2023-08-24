@@ -1,10 +1,16 @@
 import { FlatList, StyleSheet, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
+import { useSelector } from 'react-redux'
 import ProductItem from '../Components/ProductItem'
 import { colores } from '../Global/Colores'
 import Search from '../Components/Search'
-import { useSelector } from 'react-redux'
 import { useGetProductsByCategoryQuery } from '../Services/shopServices'
+
+/**
+ * 
+ * @param {*} param0 
+ * @returns 
+ */
 
 const ItemListCategory = ( { navigation, route } ) => {
   

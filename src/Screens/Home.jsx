@@ -1,10 +1,15 @@
 import { FlatList, StyleSheet, View } from 'react-native'
-import { colores } from '../Global/Colores'
 import React from 'react'
+
+import { colores } from '../Global/Colores'
 import CategoryItem from '../Components/CategoryItem'
 import Counter from '../Components/Counter'
 import { useGetCategoriesQuery } from '../Services/shopServices'
-
+/**
+ * 
+ * @param {*} param0 
+ * @returns 
+ */
 
 const Home = ( { navigation } ) => {
 
@@ -43,6 +48,5 @@ const styles = StyleSheet.create({
     },
     flatlist: {
         width: '80%'
-    },
-    
+    },  
 })

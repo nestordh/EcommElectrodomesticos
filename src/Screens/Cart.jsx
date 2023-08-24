@@ -25,13 +25,6 @@ const Cart = () => {
         />
 
         <View>
-                {/* <View style={styles.totalContainer}>
-                    
-                    <Text style={styles.text} >  
-                    Cantidad Productos: {ProdTot} </Text>
-                
-                </View> */}
-
                 <View style={styles.totalContainer1}>
                 
                     <Text style={styles.text} > Valor total: $ { total} </Text>
@@ -58,11 +51,6 @@ const styles = StyleSheet.create({
         backgroundColor: colores.fondo,
         height: "100%",
     },
-    // totalContainer: {
-    //     flexDirection: 'row',
-    //     justifyContent: 'center',
-    //     alignItems: 'center',
-    // },
     totalContainer1: {
         flexDirection: 'row',
         justifyContent: 'center',

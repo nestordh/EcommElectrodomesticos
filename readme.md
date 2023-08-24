@@ -1,14 +1,5 @@
-> Why do I have a folder named ".expo" in my project?
-The ".expo" folder is created when an Expo project is started using "expo start" command.
-> What do the files contain?
-- "devices.json": contains information about devices that have recently opened this project. This is used to populate the "Development sessions" list in your development builds.
-- "settings.json": contains the server configuration that is used to serve the application manifest.
-> Should I commit the ".expo" folder?
-No, you should not share the ".expo" folder. It does not contain any information that is relevant for other developers working on the project, it is specific to your machine.
-Upon project creation, the ".expo" folder is already added to your ".gitignore" file.
+## Repositorio de DESAFIOFINAL_HEREDIAN 
 
-
-## Repositorio del DESAFIOFINAL_HEREDIAN 
 
 Clases de React Native:
 1. Iniciando con React Native.
@@ -17,4 +8,12 @@ Clases de React Native:
 
 C18- Se usa para sql lite(libreria opensource) se carga la dependencia de 
         npm expo install expo-sqlite --> version utilizada "~11.1.1"
-para el almacenamiento de datos persistentes
+para el almacenamiento de datos persistentes.
+
+se usa 
+        npx expo export:web
+para la generacion del compilado o bundle de la app.
+Nuestro hosting es este caso es Netlify 
+
+se instala la CLI de netlify para llavar a cabo nuestras operaciones de subida
+        npm install -g netlify-cli

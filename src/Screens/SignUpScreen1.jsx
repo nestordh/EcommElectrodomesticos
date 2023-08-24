@@ -7,8 +7,6 @@ import { useSignUpMutation } from "../Services/authServices";
 import { useDispatch } from "react-redux";
 import { setUser } from "../Features/User/userSlice";
 import { isAtLeastSixCharacters, isValidEmail }  from "../Validations/auth"
-import { styles } from "../Assets/Styles/Styles";
-
 // import { setUser } from "../features/auth/authSlice";
 // import { signupSchema } from "../validations/singupSchema";
 
@@ -73,33 +71,23 @@ const SignUpScreen = ({ navigation }) => {
     };
 
     return (
-        <View style={styles.mainSignUp}>
+        <View style={styles.main}>
 
-            <View style={styles.containerSignUp} >
-                <Text style={styles.subSignUp}> Ya tienes una cuenta? </Text>
+            <View style={styles.container} >
+                <Text style={styles.sub}> Ya tienes una cuenta? </Text>
                 
                 <Pressable onPress={() => navigation.navigate("Login")}>
-                    <Text style={styles.subLinkSignUp}> Iniciar sesion </Text>
-                </Pressable>
-
-            </View>
-
-            
-            <View style={styles.containerSignUp} >
-                <Text style={styles.subSignUp}> Crea una cuenta gratis </Text>
-                
-                <Pressable onPress={() => navigation.navigate("Login")}>
-                    <Text style={styles.subLinkSignUp}> Registrate </Text>
+                    <Text style={styles.subLink}> Iniciar sesion </Text>
                 </Pressable>
 
             </View>
 
 
-            <View style={styles.containerSignUp}>
+            <View style={styles.container}>
         
-                <Text style={styles.titleSignUp}> Registrarse </Text>
+                <Text style={styles.title}> Registrarse </Text>
 
-               <InputForm label={"E-mail"} onChange={setEmail} error={errorMail} />
+                <InputForm label={"E-mail"} onChange={setEmail} error={errorMail} />
                 
                 <InputForm
                     label={"password"}
@@ -113,7 +101,7 @@ const SignUpScreen = ({ navigation }) => {
                     error={errorConfirmPassword}
                     isSecure={true}  />
 
-                <SubmitButton style={styles.subLinkSignUp}
+                <SubmitButton style={styles.subLink}
                      onPress={onSubmit} title="Entrar" />
             
             </View>
@@ -123,36 +111,36 @@ const SignUpScreen = ({ navigation }) => {
 
 export default SignUpScreen;
 
-// const styles = StyleSheet.create({
-//     mainSignUp: {
-//         width: "100%",
-//         height: "100%",
-//         justifyContent: "center",
-//         alignItems: "center",
-//     },
-//     containerSignUp: {
-//         width: "90%",
-//         flexDirection: "column",
-//         justifyContent: "center",
-//         alignItems: "center",
-//         backgroundColor: colores.greensuave,
-//         gap: 15,
-//         paddingVertical: 20,
-//         borderRadius: 10,
-//         margin:10
-//     },
-//     titleSignUp: {
-//         fontSize: 22,
-//         fontFamily: "Noto-Sans",
-//     },
-//     subSignUp: {
-//         fontSize: 14,
-//         fontFamily: "Noto-Sans",
-//         color: "black",
-//     },
-//     subLinkSignUp: {
-//         fontSize: 26,
-//         fontFamily: "Noto-Sans",
-//         color: "blue",
-//     },
-// });
+const styles = StyleSheet.create({
+    main: {
+        width: "100%",
+        height: "100%",
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    container: {
+        width: "90%",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: colores.greensuave,
+        gap: 15,
+        paddingVertical: 20,
+        borderRadius: 10,
+        margin:10
+    },
+    title: {
+        fontSize: 22,
+        fontFamily: "Noto-Sans",
+    },
+    sub: {
+        fontSize: 14,
+        fontFamily: "Noto-Sans",
+        color: "black",
+    },
+    subLink: {
+        fontSize: 26,
+        fontFamily: "Noto-Sans",
+        color: "blue",
+    },
+});

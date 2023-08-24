@@ -4,6 +4,12 @@ import { FontAwesome } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { colores } from '../Global/Colores';
 
+/**
+ * Search componente de ItemListContainer 
+ * @param onSearch Devolucion de llamada cuando se busca
+ * @param error muestra error
+ */
+
 const Search = ( { onSearch, error = "" } ) => {
     
     const [ keyword, setKeyword ] = useState("")

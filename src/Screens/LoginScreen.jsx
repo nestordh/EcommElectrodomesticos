@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
-import { colores } from "../Global/Colores";
+import { useDispatch } from "react-redux";
 import { useSignInMutation } from "../Services/authServices";
 import { isAtLeastSixCharacters, isValidEmail } from "../Validations/auth";
-import { useDispatch } from "react-redux";
 import { setUser } from "../Features/User/userSlice";
 import InputForm from "../Components/InputForm";
 import SubmitButton from "../Components/SubmitButton";
 import { insertSession } from "../SQLite";
+import { colores } from "../Global/Colores";
 
 const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
@@ -16,23 +16,19 @@ const LoginScreen = ({ navigation }) => {
   const [errorPassword, setErrorPassword] = useState("");
   const dispatch = useDispatch();
   const [triggerSignIn, resultSignIn] = useSignInMutation();
+  
   const onSubmit = () => {
     const isValidVariableEmail = isValidEmail(email);
-    //ver mensaje error
     const isCorrectPassword = isAtLeastSixCharacters(password);
-    //ver mensaje error
-
+    
     if (isValidVariableEmail && isCorrectPassword) {
-      triggerSignIn({
-        email,
-        password,
-        returnSecureToken: true,
+      triggerSignIn({ email, password, returnSecureToken: true,
       });
     }
     if (!isValidVariableEmail) setErrorEmail("Email no es correcto");
     else setErrorEmail("");
     if (!isCorrectPassword)
-      setErrorPassword("Password must be at least 6 characters");
+      setErrorPassword("La contraseña debe tener al menos 6 caracteres");
     else setErrorPassword("");
   };
 
@@ -40,16 +36,12 @@ const LoginScreen = ({ navigation }) => {
     (async () => {
       try {
         if (resultSignIn.isSuccess) {
-          console.log("inserting Session");
-
           const response = await insertSession({
             idToken: resultSignIn.data.idToken,
             localId: resultSignIn.data.localId,
             email: resultSignIn.data.email,
           });
-          console.log("Session inserted: ");
-          console.log(response);
-
+          
           dispatch(
             setUser({
               email: resultSignIn.data.email,
@@ -63,8 +55,8 @@ const LoginScreen = ({ navigation }) => {
             })
           );
         }
-      } catch (error) {
-        console.log(error.message);
+      } 
+      catch (error) {
       }
     })();
   }, [resultSignIn]);
@@ -88,7 +80,7 @@ const LoginScreen = ({ navigation }) => {
           isSecure={true}
         />
 
-        <SubmitButton onPress={onSubmit} title=" Entrar " />
+        <SubmitButton onPress={onSubmit} title=" Enviar/Entrar " />
 
         <Text style={styles.sub}> No tienes una cuenta? </Text>
 

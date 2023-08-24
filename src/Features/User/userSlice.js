@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export const userSlice = createSlice({
-    
     name: "User",
     initialState: {
         value: {
@@ -21,7 +20,6 @@ export const userSlice = createSlice({
         setUser: (state, action) => {
             state.value = action.payload
         },
-
         signOut: (state) => {
             state.value = {
                 email: "",
@@ -43,7 +41,6 @@ export const userSlice = createSlice({
         setUserLocation: (state, action) => {
             state.value.location = action.payload
         },
-
     }
 })
     
