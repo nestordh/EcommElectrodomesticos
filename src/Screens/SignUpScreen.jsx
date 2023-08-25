@@ -2,7 +2,6 @@ import { Pressable, StyleSheet, Text, View } from "react-native";
 import React, { useEffect, useState } from "react";
 import InputForm from "../Components/InputForm";
 import SubmitButton from "../Components/SubmitButton";
-import { colores } from "../Global/Colores";
 import { useSignUpMutation } from "../Services/authServices";
 import { useDispatch } from "react-redux";
 import { setUser } from "../Features/User/userSlice";
@@ -122,37 +121,3 @@ const SignUpScreen = ({ navigation }) => {
 };
 
 export default SignUpScreen;
-
-// const styles = StyleSheet.create({
-//     mainSignUp: {
-//         width: "100%",
-//         height: "100%",
-//         justifyContent: "center",
-//         alignItems: "center",
-//     },
-//     containerSignUp: {
-//         width: "90%",
-//         flexDirection: "column",
-//         justifyContent: "center",
-//         alignItems: "center",
-//         backgroundColor: colores.greensuave,
-//         gap: 15,
-//         paddingVertical: 20,
-//         borderRadius: 10,
-//         margin:10
-//     },
-//     titleSignUp: {
-//         fontSize: 22,
-//         fontFamily: "Noto-Sans",
-//     },
-//     subSignUp: {
-//         fontSize: 14,
-//         fontFamily: "Noto-Sans",
-//         color: "black",
-//     },
-//     subLinkSignUp: {
-//         fontSize: 26,
-//         fontFamily: "Noto-Sans",
-//         color: "blue",
-//     },
-// });

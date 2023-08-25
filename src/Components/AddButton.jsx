@@ -9,10 +9,9 @@ const AddButton = ({
 }) => {
     return (
         <Pressable
-            // style={{ ...styles.button, backgroundColor: color.Light }}
             style={{ ...styles.button, backgroundColor: "" }}
             
-            onPress={onPress}>
+                onPress={onPress}>
            
             <Text style={styles.text}> {title} </Text>
 

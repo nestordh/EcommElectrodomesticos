@@ -1,9 +1,9 @@
 import { Button, Image, StyleSheet, Text, View, useWindowDimensions } from "react-native";
 import React, { useEffect, useState } from "react";
-// import allProducts from "../Data/products.json";
+import allProducts from "../Data/products.json";
 import { useDispatch } from "react-redux";
 import { addCartItem } from "../Features/Cart/cartSlice";
-
+import { styles } from "../Assets/Styles/Styles";
 
 const ItemDetail = ({ navigation, route }) => {
    
@@ -38,24 +38,24 @@ const ItemDetail = ({ navigation, route }) => {
     }
 
    return (
-        <View style={styles.container}>
+        <View style={styles.containerItemDetail}>
             {product ? (
                 <View style={ orientation === "portrait"
-                            ? styles.mainContainer
-                            : styles.mainContainerLandscape
+                            ? styles.mainContainerItemDetail
+                            : styles.mainContainerLandscapeItemDetail
                     } >
 
                     <Image
                         source={{ uri: product.images[0] }}
-                        style={styles.image}
+                        style={styles.imageItemDetailItemDetail}
                         resizeMode="cover" />
 
                     <View style={styles.textContainer}>
-                        <Text style = {styles.text}>Modelo: {product.title}</Text>
-                        <Text style = {styles.text}>Descripcion del Producto: {product.description}</Text>
-                        <Text style = {styles.text}>Costo por unidad :${product.price}</Text>
-                        <Text style = {styles.text}>Cantidad: 01{product.quantity}</Text>
-                        <Text style = {styles.text}>Precio Total: ${product.price}</Text>
+                        <Text style = {styles.textItemDetail}>Modelo: {product.title}</Text>
+                        <Text style = {styles.textItemDetail}>Descripcion del Producto: {product.description}</Text>
+                        <Text style = {styles.textItemDetail}>Costo por unidad :${product.price}</Text>
+                        <Text style = {styles.textItemDetail}>Cantidad: 01{product.quantity}</Text>
+                        <Text style = {styles.textItemDetail}>Precio Total: ${product.price}</Text>
                         <Button title="Agregar al carrito"
                                 onPress={{onAddCart}}
                         ></Button>
@@ -72,37 +72,37 @@ const ItemDetail = ({ navigation, route }) => {
 
 export default ItemDetail;
 
-const styles = StyleSheet.create({
-    container: {
-        height:580,
-        borderRadius: 8,
-        padding: 20,
-        paddingLeft: 10,
-        margin: 15,
-        borderWidth: 2,
-        borderColor: "gray",
-        alignItems:"center",
-    },
-    mainContainer: {
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "flex-start",
-        padding: 10,
-    },
-    mainContainerLandscape: {
-      flexDirection: "row",
-      justifyContent: "center",
-      alignItems: "flex-start",
-      padding: 10,
-  },
-    image: {
-        width: 300,
-        height: 250,
-    },
-    textContainer: {
-      flexDirection: 'column'
-    },
-    text:{
-        fontSize: 20,
-    },
-});
+// const styles = StyleSheet.create({
+//     containerItemDetail: {
+//         height:580,
+//         borderRadius: 8,
+//         padding: 20,
+//         paddingLeft: 10,
+//         margin: 15,
+//         borderWidth: 2,
+//         borderColor: "gray",
+//         alignItems:"center",
+//     },
+//     mainContainerItemDetail: {
+//         flexDirection: "column",
+//         justifyContent: "center",
+//         alignItems: "flex-start",
+//         padding: 10,
+//     },
+//     mainContainerLandscapeItemDetail: {
+//       flexDirection: "row",
+//       justifyContent: "center",
+//       alignItems: "flex-start",
+//       padding: 10,
+//   },
+//     imageItemDetail: {
+//         width: 300,
+//         height: 250,
+//     },
+//     textContainerItemDetail: {
+//       flexDirection: 'column'
+//     },
+//     textItemDetail:{
+//         fontSize: 20,
+//     },
+// });

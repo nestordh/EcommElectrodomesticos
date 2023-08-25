@@ -45,4 +45,40 @@ export const styles = StyleSheet.create({
             color: "blue",
         },
     
+        
+            containerItemDetail: {
+                height:580,
+                borderRadius: 8,
+                padding: 20,
+                paddingLeft: 10,
+                margin: 15,
+                borderWidth: 2,
+                borderColor: "gray",
+                alignItems:"center",
+            },
+            mainContainerItemDetail: {
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "flex-start",
+                padding: 10,
+            },
+            mainContainerLandscapeItemDetail: {
+              flexDirection: "row",
+              justifyContent: "center",
+              alignItems: "flex-start",
+              padding: 10,
+          },
+            imageItemDetail: {
+                width: 300,
+                height: 250,
+            },
+            textContainerItemDetail: {
+              flexDirection: 'column'
+            },
+            textItemDetail:{
+                fontSize: 20,
+            },
+      
+        
+
 })
