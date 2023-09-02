@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, Pressable } from "react-native";
 import React from "react";
-import { colores } from "../Global/Colores";
+import { colores } from "../Assets/Colors/Colores";
 import { AntDesign } from "@expo/vector-icons";
 import { useDispatch, useSelector } from "react-redux";
 import { signOut } from "../Features/User/userSlice";

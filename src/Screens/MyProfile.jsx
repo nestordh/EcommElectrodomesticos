@@ -36,7 +36,7 @@ const MyProfile = ({navigation}) => {
                 ) : (
             
                 <Image
-                    source={require("../Assets/Images/defaultImage.png")}
+                    source={require("../Assets/Images/imageperfil.png")}
                     style={styles.image}
                     resizeMode="cover"
                 />

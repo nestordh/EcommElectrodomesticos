@@ -2,7 +2,7 @@ import { FlatList, StyleSheet, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import ProductItem from '../Components/ProductItem'
-import { colores } from '../Global/Colores'
+import { colores } from '../Assets/Colors/Colores'
 import Search from '../Components/Search'
 import { useGetProductsByCategoryQuery } from '../Services/shopServices'
 

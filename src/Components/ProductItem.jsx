@@ -1,7 +1,7 @@
 import { StyleSheet, Text, Image, useWindowDimensions, Pressable } from 'react-native'
 import React from 'react'
 import Card from './Card'
-import { colores } from '../Global/Colores'
+import { colores } from '../Assets/Colors/Colores'
 
 const ProductItem = ( { item, navigation }) => {
   

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Pressable, StyleSheet, Text, TextInput, View, useWindowDimensions } from 'react-native'
 import { FontAwesome } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
-import { colores } from '../Global/Colores';
+import { colores } from '../Assets/Colors/Colores';
 
 /**
  * Search componente de ItemListContainer 

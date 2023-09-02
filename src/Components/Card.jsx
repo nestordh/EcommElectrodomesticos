@@ -1,6 +1,6 @@
 import { StyleSheet, View } from 'react-native'
 import React from 'react'
-import { colores } from '../Global/Colores'
+import { colores } from '../Assets/Colors/Colores'
 
 const Card = ( { children, additionalStyle =[] } ) => {
   return (

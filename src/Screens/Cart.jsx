@@ -1,7 +1,7 @@
 import { FlatList, Pressable, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import CartItem from '../Components/CartItem';
-import { colores } from '../Global/Colores';
+import { colores } from '../Assets/Colors/Colores';
 import { useSelector } from 'react-redux';
 import { usePostCartMutation } from '../Services/shopServices';
 

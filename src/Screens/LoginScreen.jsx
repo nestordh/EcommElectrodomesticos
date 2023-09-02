@@ -7,7 +7,7 @@ import { setUser } from "../Features/User/userSlice";
 import InputForm from "../Components/InputForm";
 import SubmitButton from "../Components/SubmitButton";
 import { insertSession } from "../SQLite";
-import { colores } from "../Global/Colores";
+import { colores } from "../Assets/Colors/Colores";
 
 const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
@@ -66,7 +66,7 @@ const LoginScreen = ({ navigation }) => {
       <View style={styles.container}>
         
         <Text style={styles.title}> Iniciar Sesion </Text>
-
+        
         <InputForm
           label={"email"}
           onChange={(email) => setEmail(email)}

@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { colores } from "../Global/Colores";
+import { colores } from "../Assets/Colors/Colores";
 import { Entypo } from "@expo/vector-icons";
 
 const CartItem = ({ cartItem }) => {

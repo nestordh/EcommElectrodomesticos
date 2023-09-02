@@ -7,7 +7,7 @@ import ShopStack from '../Stacks/ShopStack'
 import CartStack from '../Stacks/CartStack'
 import OrderStack from '../Stacks/OrderStack';
 import MyProfileStack from '../Stacks/MyProfileStack';
-import { colores } from '../../Global/Colores';
+import { colores } from '../../Assets/Colors/Colores';
 
 
 /**

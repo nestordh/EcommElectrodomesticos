@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { usePostUserLocationMutation } from "../Services/shopServices";
 import { useDispatch, useSelector } from "react-redux";
 import { setUserLocation } from "../Features/User/userSlice";
-import { colores } from "../Global/Colores";
+import { colores } from "../Assets/Colors/Colores";
 import AddButton from "../Components/AddButton";
 import MapPreview from "../Components/MapPreview";
 import { mapa_api_key } from "../Database/firebaseConfig";

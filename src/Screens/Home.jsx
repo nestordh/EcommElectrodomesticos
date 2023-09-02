@@ -1,7 +1,7 @@
 import { FlatList, StyleSheet, View } from 'react-native'
 import React from 'react'
 
-import { colores } from '../Global/Colores'
+import { colores } from '../Assets/Colors/Colores'
 import CategoryItem from '../Components/CategoryItem'
 import Counter from '../Components/Counter'
 import { useGetCategoriesQuery } from '../Services/shopServices'

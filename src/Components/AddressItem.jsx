@@ -1,7 +1,7 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import { Entypo } from "@expo/vector-icons";
 import React from "react";
-import { colores } from "../Global/Colores";
+import { colores } from "../Assets/Colors/Colores";
 
 const AddressItem = ({ location, navigation }) => {
 

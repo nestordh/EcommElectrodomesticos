@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { Feather } from "@expo/vector-icons";
-import { colores } from "../Global/Colores";
+import { colores } from "../Assets/Colors/Colores";
 
 const OrderItem = ({ order }) => {
     const total = order.items.reduce((acc, currentItem) => (acc += currentItem.price * currentItem.quantity), 0 );

@@ -8,4 +8,14 @@ export const colores = {
     greensuave: "#bcf3d9",
     fondo: "#D0D3D4",
     fondo2:"#D0D3D4",
+    
+    
+    back:"#ACEDFF",
+    backLight:"#D9E3EC",
+    icon:"#5475AE",
+    iconLight:"#8BB3E7",
+    dark:"#322654",
+    light:"#D3CCE6",
+    buttom:"#7E7D7F",
+    buttomLight:"A8A7A9#",
 }

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Image, View, StyleSheet, Text } from "react-native";
 import AddButton from "../Components/AddButton";
-import { colores } from "../Global/Colores";
+import { colores } from "../Assets/Colors/Colores";
 import { usePostProfileImageMutation } from "../Services/shopServices";
 import { useDispatch, useSelector } from "react-redux";
 import { saveImage } from "../Features/User/userSlice";

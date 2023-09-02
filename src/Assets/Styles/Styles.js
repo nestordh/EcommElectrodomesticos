@@ -1,5 +1,5 @@
 import { StyleSheet, StatusBar, Platform } from "react-native"
-import { colores } from "../../Global/Colores"
+import { colores } from "../Colors/Colores"
 
 
 /**

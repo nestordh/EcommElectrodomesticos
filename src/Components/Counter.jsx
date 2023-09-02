@@ -1,6 +1,6 @@
 import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import React, { useState } from "react";
-import { colores } from "../Global/Colores";
+import { colores } from "../Assets/Colors/Colores";
 import { useDispatch, useSelector } from "react-redux";
 import { increment, decrement, incrementByAmount, reset} from "../Features/Counter/counterSlice";
 

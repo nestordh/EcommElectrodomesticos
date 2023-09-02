@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import AddButton from "../Components/AddButton";
 import AddressItem from '../Components/AddressItem';
 import { useGetUserLocationQuery } from "../Services/shopServices";
-import { colores } from "../Global/Colores";
+import { colores } from "../Assets/Colors/Colores";
 
 const ListAddress = ({ navigation }) => {
     const { location, localId } = useSelector((state) => state.userReducer.value);
