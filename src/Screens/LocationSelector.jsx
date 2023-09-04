@@ -1,13 +1,14 @@
 import { StyleSheet, Text, View } from "react-native";
 import React, { useEffect, useState } from "react";
-import { usePostUserLocationMutation } from "../Services/shopServices";
 import { useDispatch, useSelector } from "react-redux";
+import * as Location from "expo-location";
+
 import { setUserLocation } from "../Features/User/userSlice";
 import { colores } from "../Assets/Colors/Colores";
 import AddButton from "../Components/AddButton";
 import MapPreview from "../Components/MapPreview";
 import { mapa_api_key } from "../Database/firebaseConfig";
-import * as Location from "expo-location";
+import { usePostUserLocationMutation } from "../Services/shopServices";
 
 const LocationSelector = ({ navigation }) => {
 

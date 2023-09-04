@@ -1,7 +1,8 @@
-import { StyleSheet, SafeAreaView, StatusBar, Platform  } from 'react-native'
+import { SafeAreaView } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react'
+
 import AuthStack from './Stacks/AuthStack';
 import { getSession } from '../SQLite';
 import { setUser } from '../Features/User/userSlice';

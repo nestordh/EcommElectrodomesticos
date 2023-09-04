@@ -3,12 +3,13 @@ import { FontAwesome, Ionicons, Entypo } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import React from 'react'
+
 import ShopStack from '../Stacks/ShopStack'
 import CartStack from '../Stacks/CartStack'
 import OrderStack from '../Stacks/OrderStack';
 import MyProfileStack from '../Stacks/MyProfileStack';
 import { colores } from '../../Assets/Colors/Colores';
-
+import { styles } from '../../Assets/Styles/Styles';
 
 /**
  * TabNavigator de Navigator
@@ -22,8 +23,8 @@ const TabNavigator = () => {
     <Tab.Navigator
       screenOptions={{
         headerShown: false,
-        // tabBarShowLabel: false,
-        tabBarStyle: styles.tabBar,
+        tabBarShowLabel: false,
+        tabBarStyle: styles.tabBarNav,
       }}
     >
       <Tab.Screen
@@ -94,7 +95,7 @@ const TabNavigator = () => {
                 />
               </View>
             );
-          },
+          }
         }}
       />
     </Tab.Navigator>
@@ -103,12 +104,10 @@ const TabNavigator = () => {
 
 export default TabNavigator;
 
-const styles = StyleSheet.create({
-    tabBar: {
-        backgroundColor: colores.fondo,
-        shadowColor: 'black',
-        // height:'6%',
-        height: 60,
-    
-       }
-});
+// const styles = StyleSheet.create({
+//     tabBarNav: {
+//         backgroundColor: colores.fondo,
+//         shadowColor: 'black',
+//         height: 60,
+//     }
+// });

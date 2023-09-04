@@ -1,6 +1,8 @@
 import { Image, StyleSheet, View } from "react-native";
 import React from "react";
+
 import { mapa_api_key } from "../Database/firebaseConfig";
+import { styles } from "../Assets/Styles/Styles";
 
 const MapPreview = ({ location }) => {
 
@@ -18,13 +20,3 @@ const MapPreview = ({ location }) => {
 
 export default MapPreview;
 
-const styles = StyleSheet.create({
-    mapPreview: {
-        justifyContent: "center",
-        alignItems: "center",
-    },
-    mapImage: {
-        width: 300,
-        height: 300,
-    },
-});

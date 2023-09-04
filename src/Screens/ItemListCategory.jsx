@@ -1,13 +1,14 @@
-import { FlatList, StyleSheet, View } from 'react-native'
+import { FlatList, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
+
 import ProductItem from '../Components/ProductItem'
-import { colores } from '../Assets/Colors/Colores'
 import Search from '../Components/Search'
 import { useGetProductsByCategoryQuery } from '../Services/shopServices'
+import { styles } from '../Assets/Styles/Styles'
 
 /**
- * 
+ * errores del buscador
  * @param {*} param0 
  * @returns 
  */
@@ -15,16 +16,21 @@ import { useGetProductsByCategoryQuery } from '../Services/shopServices'
 const ItemListCategory = ( { navigation, route } ) => {
   
   const { category } = route.params
-  const categorySelected = useSelector ( state => state.marketReducer.value.categorySelected )
-  const { data: productsSelected, isLoading, isError } = useGetProductsByCategoryQuery ( categorySelected )
+  
+  const categorySelected= useSelector ( state => state.marketReducer.value.categorySelected )
+  
+  const {data: productsSelected , isLoading, isError } = useGetProductsByCategoryQuery (categorySelected)
+
   const [products, setProducts] = useState([])
+  
   const [keyword, setKeyword] = useState ("")
+  
   const [keywordError, setKeywordError] = useState ("")
 
   useEffect(()=> {
     if (productsSelected) {
-      const productsFiltered = productsSelected.filter(product => product.title.toLocaleLowerCase().includes(keyword.toLowerCase()))
-      setProducts(productsFiltered)
+     const productsFiltered = productsSelected.filter(product => product.title.toLocaleLowerCase().includes(keyword.toLowerCase()))
+     setProducts(productsFiltered)
     
   }}, [productsSelected, keyword])
     
@@ -34,19 +40,20 @@ const ItemListCategory = ( { navigation, route } ) => {
 
     if (evaluation) {
       setKeyword(input)
-      setKeywordError("")
+      setKeywordError("")  
       }else {
         setKeywordError("Solo letras y números")
       }
   }  
 
   return (
-    <View style = { styles.container } >
+    <View style = { styles.containerItemListCategory } >
         <Search
                 onSearch = { onSearch }
                 error = { keywordError }
-                goBack = { () => navigation.goBack() } />
-       
+                goBack = {() => navigation.goBack()} 
+                />
+        
         <FlatList
               data = { products }
               keyExtractor = { product => product.id }
@@ -63,13 +70,3 @@ const ItemListCategory = ( { navigation, route } ) => {
 }
 
 export default ItemListCategory
-
-const styles = StyleSheet.create({
-    container: {
-        height: '100%',
-        backgroundColor: colores.marina,
-        alignItems: 'center',
-        paddingTop:10,
-       
-    },
-  } )

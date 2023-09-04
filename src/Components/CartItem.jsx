@@ -1,20 +1,21 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import React from "react";
-import { colores } from "../Assets/Colors/Colores";
 import { Entypo } from "@expo/vector-icons";
 
+import { styles } from "../Assets/Styles/Styles";
+
 const CartItem = ({ cartItem }) => {
-         console.log(cartItem);
+         
     return (
         
-        <View style={styles.card} onPress={() => {}}>
+        <View style={styles.containerCardItem} onPress={() => {}}>
             
-            <View style={styles.textContainer}>
+            <View style={styles.textContainerCardItem}>
                
-                <Text style={styles.text}> {cartItem.title} </Text>
-                <Text style = {styles.text2}> (Cantidad:  {cartItem.quantity}) </Text>
-                <Text style={styles.text2}> {cartItem.brand}</Text>
-                <Text style={styles.text2}> Precio x unidad:  ${cartItem.price}</Text>
+                <Text style={styles.textCardItem}> {cartItem.title} </Text>
+                <Text style = {styles.text2CardItem}> (Cantidad:  {cartItem.quantity}) </Text>
+                <Text style={styles.text2CardItem}> {cartItem.brand}</Text>
+                <Text style={styles.text2CardItem}> Precio x unidad:  ${cartItem.price}</Text>
             
             </View>
            
@@ -25,34 +26,3 @@ const CartItem = ({ cartItem }) => {
 };
 
 export default CartItem;
-
-const styles = StyleSheet.create({
-    card: {
-        height: 100,
-        backgroundColor: colores.fondo,
-        padding: 10,
-        margin: 10,
-        borderWidth: 2,
-        borderRadius: 10,
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
-        
-    },
-    textContainer: {
-        width: "70%",
-        flexDirection: "column",
-        justifyContent: "flex-start",
-        alignItems: "flex-start",
-    },
-    text: {
-        fontFamily: "Lobster",
-        fontSize: 19,
-        color: "green",
-    },
-    text2: {
-        fontFamily: "Noto-Sans",
-        fontSize: 14,
-        color: "gray",
-    },
-});

@@ -1,11 +1,12 @@
-import { StyleSheet, Text, View, Pressable } from "react-native";
+import { Text, View, Pressable } from "react-native";
 import React from "react";
-import { colores } from "../Assets/Colors/Colores";
 import { AntDesign } from "@expo/vector-icons";
 import { useDispatch, useSelector } from "react-redux";
-import { signOut } from "../Features/User/userSlice";
 import { SimpleLineIcons } from "@expo/vector-icons";
+
+import { signOut } from "../Features/User/userSlice";
 import { deleteSession } from "../SQLite";
+import { styles } from "../Assets/Styles/Styles";
 
 
 const Header = ({ route, navigation }) => {
@@ -21,26 +22,21 @@ const Header = ({ route, navigation }) => {
 
     const onSignout = async () => { 
       try{
-          //debugger
-          console.log("Borrando sesion...");
           const response = await deleteSession(localId)
-          console.log("Session borrada: ")
-          console.log(response)
           dispatch(signOut());
       } catch (error) {
-          console.log('Error al cerrar la sesion:')
-          console.log(error.message);
-      }
+          ('Error al cerrar la sesion:')
+        }
     }
 
   return (
     <View style={styles.containerHeader}>
       
-      <Text style={styles.text}> {title} </Text>
+      <Text style={styles.textHeader}> {title} </Text>
         
         {navigation.canGoBack() ? (
         
-          <Pressable style={styles.back}
+          <Pressable style={styles.backHeader}
                      onPress={() => navigation.goBack()} >
 
               <AntDesign name="back" size= {25} color="black" />
@@ -52,11 +48,12 @@ const Header = ({ route, navigation }) => {
    
       {email ? (
                 <Pressable
-                    style={styles.exit}
-                   // onPress={() => dispatch(signOut())} >
-                    onPress={onSignout} >
+                    style={styles.exitHeader}
+                    onPress={onSignout} 
+                >
                    
                   <SimpleLineIcons name="logout" size={25} color="black" />
+                  
                   <Text> Salir </Text>
                 
                 </Pressable>
@@ -68,30 +65,3 @@ const Header = ({ route, navigation }) => {
 };
 
 export default Header;
-
-const styles = StyleSheet.create({
-  containerHeader: {
-    backgroundColor: colores.fondo,
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    paddingVertical: 15,
-    position: "relative",
-
-  },
-  text: {
-    fontSize: 25,
-    fontFamily: "Lobster",
-  },
-  back: {
-    position: "absolute",
-    right: 30,
-    top: "20%",
-  },
-  exit: {
-    position: "absolute",
-    left: 30,
-    top: "20%",
-  },
-
-});

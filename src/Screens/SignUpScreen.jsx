@@ -8,8 +8,8 @@ import { setUser } from "../Features/User/userSlice";
 import { isAtLeastSixCharacters, isValidEmail }  from "../Validations/auth"
 import { styles } from "../Assets/Styles/Styles";
 
-// import { setUser } from "../features/auth/authSlice";
-// import { signupSchema } from "../validations/singupSchema";
+//import { setUser } from "../features/auth/authSlice";
+//import { signupSchema } from "../validations/singupSchema";
 
 const SignUpScreen = ({ navigation }) => {
     const [email, setEmail] = useState("");
@@ -43,6 +43,7 @@ const SignUpScreen = ({ navigation }) => {
             //Submit logic with validations
             const isValidVariableEmail = isValidEmail(email)
             //ver mensaje error
+            ("Direccion de mail no valida")
             const isCorrectPassword = isAtLeastSixCharacters(password)
             //ver mensaje error
             const isRepeatedPasswordCorrect = password === confirmPassword
@@ -66,8 +67,9 @@ const SignUpScreen = ({ navigation }) => {
             else setErrorConfirmPassword('')
 
         } catch (err) {
-            console.log("Catch error");
-            console.log(err.message);
+            //console.log("Catch error");
+            ('mal direccion')
+            //console.log(err.message);
         }
     };
 
@@ -84,14 +86,14 @@ const SignUpScreen = ({ navigation }) => {
             </View>
 
             
-            <View style={styles.containerSignUp} >
+            {/* <View style={styles.containerSignUp} >
                 <Text style={styles.subSignUp}> Crea una cuenta gratis </Text>
                 
                 <Pressable onPress={() => navigation.navigate("Login")}>
                     <Text style={styles.subLinkSignUp}> Registrate </Text>
                 </Pressable>
 
-            </View>
+            </View> */}
 
 
             <View style={styles.containerSignUp}>

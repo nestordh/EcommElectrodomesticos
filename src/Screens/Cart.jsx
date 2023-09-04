@@ -1,18 +1,23 @@
-import { FlatList, Pressable, StyleSheet, Text, View } from 'react-native'
+import { FlatList, Pressable, Text, View } from 'react-native'
 import React from 'react'
-import CartItem from '../Components/CartItem';
-import { colores } from '../Assets/Colors/Colores';
 import { useSelector } from 'react-redux';
+
+import CartItem from '../Components/CartItem';
 import { usePostCartMutation } from '../Services/shopServices';
+import { styles } from '../Assets/Styles/Styles';
+
+
+/**
+ * carrito de compra
+ */
 
 const Cart = () => {
     const {items: CartData, total, updatedAt, user } = useSelector(state => state.cartReducer.value)
     const [triggerPostCart, result ] = usePostCartMutation()
     const onConfirm = ( ) => { triggerPostCart({items: CartData, total, user, updatedAt }) }
-    console.log(result);
-    
+        
     return (
-    <View style={styles.container}>
+    <View style={styles.containerCart }>
         
         <FlatList
             data={CartData}
@@ -25,13 +30,13 @@ const Cart = () => {
         />
 
         <View>
-                <View style={styles.totalContainer1}>
+                <View style={styles.totalContainer1Cart}>
                 
-                    <Text style={styles.text} > Valor total: $ { total} </Text>
+                    <Text style={styles.textCart} > Valor total: $   {total} </Text>
 
                     <Pressable onPress={onConfirm} >
 
-                        <Text style={styles.text1} > Confirmar compra </Text>
+                        <Text style={styles.text1Cart} > Confirmar compra </Text>
                         
                     </Pressable>
 
@@ -43,33 +48,3 @@ const Cart = () => {
 }
 
 export default Cart
-
-const styles = StyleSheet.create({
-    container: {
-        justifyContent: 'space-between',
-        flex: 1,
-        backgroundColor: colores.fondo,
-        height: "100%",
-    },
-    totalContainer1: {
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    text: {
-        fontSize: 20,
-        fontFamily: "Noto-Sans",
-        padding: 10
-      },
-    text1: {
-        fontSize: 20,
-        fontFamily: "Noto-Sans",
-        padding: 10,
-        margin:10,
-        borderRadius: 10,
-        borderColor: "black",
-        borderWidth: 2,
-        backgroundColor: colores.Light,
-
-    },
-})
