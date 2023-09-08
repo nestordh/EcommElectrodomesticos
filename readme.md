@@ -1,18 +1,18 @@
 ## Repositorio de DESAFIOFINAL_HEREDIAN 
  
 <a name="general-info"></a>
-### General Info
+### General Info sobre la app
 
 1. [Informacion-General ](#informacion-general)
 ## Informacion General 
 ***
-Este es una app movile basada en un e-commerce para la venta de electrodomesticos
-es una app desarrollada en React native, de tipo hibrida(bridge) utilizando el frameword ExpoCLI ,
+Este es una app movile basada en un e-commerce para la venta de electrodomesticos.
+Es una app desarrollada en React native, de tipo hibrida(bridge) utilizando el frameword ExpoCLI ,
 Se ingresa a travez de la creacion de un usuario con un email y un password, la cracion de la cuente es gratuita.
-se va a visualizar la 1 pantalla donde se puede elegir que tipo de producto se quiere elegir
-una vez que esta en la pnatalla de categorias se puede ver sus productos con una breve informacion para ver mas de este de elige el producto y desde ahi se van a observar sus distintas imagenes y caracteristicas del mismo, 
-Se seleccionan la cantidad de uno o mas productos igules y distintos y se genera una orden len la cual ya se puede dar la confirmacion de la compra, cada ventana cuenta con una opcion de volver a la pantalla de atras o eliminar o salir de la App.
-Tiene la opcion de configuracion de perfil de usuario donde se puede tomar una foto y tenerla en su perfil. Como asi tambien una ubicacion de donde se encuentra ubicado.
+Se va a visualizar la 1 pantalla donde se puede elegir que tipo de producto se quiere elegir,
+una vez que esta en la pantalla de categorias se puede ver sus productos con una breve informacion para ver mas de este de elige el producto y desde ahi se van a observar sus distintas imagenes y caracteristicas del mismo, 
+Se seleccionan la cantidad de uno o mas productos igules y distintos y se genera una orden en la cual ya se puede dar la confirmacion de la compra, cada ventana cuenta con una opcion de volver a la pantalla de atras o eliminar o salir de la App.
+Tiene la opcion de configuracion de perfil de usuario donde se puede tomar una foto o defineir una y tenerla en su perfil. Como asi tambien una ubicacion de donde se encuentra ubicado.
 
 ### Screenshot
 ![Image text](/path/to/the/screenshot.png)
@@ -21,7 +21,7 @@ Tiene la opcion de configuracion de perfil de usuario donde se puede tomar una f
 2. [Instalacion](#instalacion)
 ## Instalacion
 ***
-Para instalar desde git 
+Para instalar desde git clonar el repositorio
 ```
 $ git clone  https://github.com/nestordh
 $ cd ../path/to/the/file
@@ -37,7 +37,7 @@ O desde :
 Para su creacion se utilizo Expo CLi desde npx
 
 
-A list of technologies used within the project:
+La lista de tecnologias usadas en este proyecto son:
 * [node](https://nodejs.org): Version v20.0.0 
 * [npm] version v9.6.4
 * [EXPO CLI] (): Version 2.34
@@ -87,4 +87,4 @@ Pruebas realizadas en Emulador de Android en Pixel 4 api 32 Android 12.0
 > Tutorial de reac native
 > You tube / instagram .
 
-
+## Heredia NestorD

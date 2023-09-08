@@ -1,15 +1,20 @@
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Pressable, Text, View } from "react-native";
 import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+
+import { setUser } from "../Features/User/userSlice";
 import InputForm from "../Components/InputForm";
 import SubmitButton from "../Components/SubmitButton";
 import { useSignUpMutation } from "../Services/authServices";
-import { useDispatch } from "react-redux";
-import { setUser } from "../Features/User/userSlice";
 import { isAtLeastSixCharacters, isValidEmail }  from "../Validations/auth"
 import { styles } from "../Assets/Styles/Styles";
-
-//import { setUser } from "../features/auth/authSlice";
-//import { signupSchema } from "../validations/singupSchema";
+import { basLogo1 } from "../Assets/Images/basLogo1.jpg"
+ 
+/**
+  * 
+  * @param {*} param0 
+  * @returns 
+  */
 
 const SignUpScreen = ({ navigation }) => {
     const [email, setEmail] = useState("");
@@ -32,7 +37,7 @@ const SignUpScreen = ({ navigation }) => {
                     location: {
                         latitude: "",
                         longitude: "",
-                    },
+                        },
                 })
             )
         }
@@ -40,12 +45,8 @@ const SignUpScreen = ({ navigation }) => {
 
     const onSubmit = () => {
         try {
-            //Submit logic with validations
             const isValidVariableEmail = isValidEmail(email)
-            //ver mensaje error
-            ("Direccion de mail no valida")
             const isCorrectPassword = isAtLeastSixCharacters(password)
-            //ver mensaje error
             const isRepeatedPasswordCorrect = password === confirmPassword
 
             if (isValidVariableEmail && isCorrectPassword && isRepeatedPasswordCorrect) {
@@ -67,14 +68,21 @@ const SignUpScreen = ({ navigation }) => {
             else setErrorConfirmPassword('')
 
         } catch (err) {
-            //console.log("Catch error");
             ('mal direccion')
-            //console.log(err.message);
-        }
+            }
     };
 
     return (
         <View style={styles.mainSignUp}>
+
+            <View>
+                <Image 
+                    source={{basLogo1}}
+                    style={styles.imageSignUp}
+                    resizeMode="contain"
+                    />   
+            </View>
+             
 
             <View style={styles.containerSignUp} >
                 <Text style={styles.subSignUp}> Ya tienes una cuenta? </Text>
@@ -82,40 +90,29 @@ const SignUpScreen = ({ navigation }) => {
                 <Pressable onPress={() => navigation.navigate("Login")}>
                     <Text style={styles.subLinkSignUp}> Iniciar sesion </Text>
                 </Pressable>
-
             </View>
-
-            
-            {/* <View style={styles.containerSignUp} >
-                <Text style={styles.subSignUp}> Crea una cuenta gratis </Text>
-                
-                <Pressable onPress={() => navigation.navigate("Login")}>
-                    <Text style={styles.subLinkSignUp}> Registrate </Text>
-                </Pressable>
-
-            </View> */}
-
 
             <View style={styles.containerSignUp}>
         
                 <Text style={styles.titleSignUp}> Registrarse </Text>
 
-               <InputForm label={"E-mail"} onChange={setEmail} error={errorMail} />
+                <InputForm label={"E-mail"}
+                           onChange={setEmail}
+                           error={errorMail} />
                 
-                <InputForm
-                    label={"password"}
-                    onChange={setPassword}
-                    error={errorPassword}
-                    isSecure={true} /> 
+                <InputForm label={"password"}
+                           onChange={setPassword}
+                           error={errorPassword}
+                           isSecure={true} /> 
 
-                <InputForm
-                    label={"Confirmar password"}
-                    onChange={setConfirmPassword}
-                    error={errorConfirmPassword}
-                    isSecure={true}  />
+                <InputForm label={"Confirmar password"}
+                           onChange={setConfirmPassword}
+                           error={errorConfirmPassword}
+                           isSecure={true} />
 
                 <SubmitButton style={styles.subLinkSignUp}
-                     onPress={onSubmit} title="Entrar" />
+                              title="Entrar" 
+                              onPress={onSubmit} /> 
             
             </View>
         </View>

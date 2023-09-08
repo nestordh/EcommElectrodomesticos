@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
-import { Pressable, StyleSheet, Text, TextInput, View, useWindowDimensions } from 'react-native'
-import { FontAwesome } from '@expo/vector-icons';
-import { FontAwesome5 } from '@expo/vector-icons';
-import { colores } from '../Assets/Colors/Colores';
+import { Pressable, Text, TextInput, View, useWindowDimensions } from 'react-native'
+
+import { FontAwesome, FontAwesome5 } from '@expo/vector-icons';
+import { styles } from '../Assets/Styles/Styles';
+
 
 /**
- * Search componente de ItemListContainer 
+ * componentetBuscador componente de ItemListContainer 
  * @param onSearch Devolucion de llamada cuando se busca
  * @param error muestra error
  */
@@ -22,9 +23,9 @@ const Search = ( { onSearch, error = "" } ) => {
         
   return (
     
-    <View style = { width > 350 ? styles.container : styles.containerSm } >
+    <View style = { width > 350 ? styles.containerSearch : styles.containerSmSearch } >
         
-        <TextInput style = { styles.input} 
+        <TextInput style = { styles.inputSearch} 
                     placeholder='Search...'
                     value={keyword}
                     onChangeText={setKeyword} />
@@ -42,39 +43,10 @@ const Search = ( { onSearch, error = "" } ) => {
         </Pressable>
       
         { error ?
-            <Text>
-                {error}
-            </Text>
+            <Text> {error} </Text>
         : null }
    </View>
   )
 }
 
 export default Search
-
-const styles = StyleSheet.create({
-    container: {
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-        gap: 10,
-        paddingLeft : 15,
-        borderWidth:2,
-        borderColor: colores.greensuave,
-        borderRadius: 10,
-        width: "auto",
-    },
-    input: {
-        width: 250,
-        padding: 8,
-        fontSize: 18,
-        backgroundColor: colores.Light,
-        borderRadius: 10,
-    },
-    containerSm: {
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '10%',
-    },
-})

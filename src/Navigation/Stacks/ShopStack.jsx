@@ -11,26 +11,24 @@ const Stack = createNativeStackNavigator()
 const ShopStack = () => {
  
   return (
-    
-    <Stack.Navigator
+      <Stack.Navigator
         initialRouteName = "Home"
         screenOptions = {({ route,
                             navigation
                         }) => ({
-          header: () => {
-            return <Header route={route} navigation={navigation} />;
+                 header: () => {
+                       return <Header route={route} navigation={navigation} />;
           },
         })}
-    >
-      <Stack.Screen name="Tienda" component={Home} />
+      >
+          <Stack.Screen name="Tienda" component={Home} />
      
-      <Stack.Screen name="ItemListCategory" component={ItemListCategory} />
+          <Stack.Screen name="ItemListCategory" component={ItemListCategory} />
      
-      <Stack.Screen name="Detail" component={ItemDetail} />
+          <Stack.Screen name="Detail" component={ItemDetail} />
     
-    </Stack.Navigator>
-  
-  );
+      </Stack.Navigator>
+    );
 };
 
 export default ShopStack;

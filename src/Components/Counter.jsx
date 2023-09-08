@@ -8,9 +8,7 @@ import { styles } from "../Assets/Styles/Styles";
 const Counter = () => {
     
     const [inputToAdd, setInputToAdd] = useState('0');
-
     const dispatch = useDispatch()
-
     const count = useSelector(state => state.counterReducer.value )
 
     return (
@@ -18,18 +16,15 @@ const Counter = () => {
            
             <View style = { styles.buttonsContainerCounter} >
                 <Pressable style = { styles.button1Counter }
-                    onPress = { () => dispatch(decrement () ) }
-                >
-                        <Text style = { styles.buttonText1Counter } > - </Text>
+                           onPress = {() => dispatch(decrement ())} >
+                           <Text style = { styles.buttonText1Counter } > - </Text>
 
                 </Pressable>
                 
                 <Text style = { styles.span1Counter } > { count } </Text>
                 <Pressable style = { styles.button1Counter }
-                     onPress = { () => dispatch ( increment() ) }
-                >
-        
-                        <Text style={styles.buttonText1Counter}> + </Text>
+                           onPress = {() => dispatch ( increment())}  >
+                           <Text style={styles.buttonText1Counter}> + </Text>
                 </Pressable>
             </View>
             
@@ -42,7 +37,7 @@ const Counter = () => {
         
                 <Pressable 
                     style={styles.button2Counter}
-                    onPress={()=> dispatch (incrementByAmount ( Number (inputToAdd) ) ) } >
+                    onPress={()=> dispatch (incrementByAmount (Number(inputToAdd)))} >
                     <Text style={styles.buttonText2Counter} > Agregar </Text>
                 </Pressable>
             </View>

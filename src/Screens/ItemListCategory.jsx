@@ -16,27 +16,21 @@ import { styles } from '../Assets/Styles/Styles'
 const ItemListCategory = ( { navigation, route } ) => {
   
   const { category } = route.params
-  
   const categorySelected= useSelector ( state => state.marketReducer.value.categorySelected )
-  
   const {data: productsSelected , isLoading, isError } = useGetProductsByCategoryQuery (categorySelected)
-
   const [products, setProducts] = useState([])
-  
   const [keyword, setKeyword] = useState ("")
-  
   const [keywordError, setKeywordError] = useState ("")
 
   useEffect(()=> {
     if (productsSelected) {
      const productsFiltered = productsSelected.filter(product => product.title.toLocaleLowerCase().includes(keyword.toLowerCase()))
      setProducts(productsFiltered)
-    
-  }}, [productsSelected, keyword])
+    }}, [productsSelected, keyword])
     
   const onSearch = (input) => {
-  const expression = /^[a-zA-Z0-9\ ]*$/
-  const evaluation = expression.test(input)
+    const expression = /^[a-zA-Z0-9\ ]*$/
+    const evaluation = expression.test(input)
 
     if (evaluation) {
       setKeyword(input)
@@ -55,15 +49,14 @@ const ItemListCategory = ( { navigation, route } ) => {
                 />
         
         <FlatList
-              data = { products }
-              keyExtractor = { product => product.id }
+              data = {products}
+              keyExtractor = {product => product.id}
               renderItem = {({item}) =>        
                            <ProductItem 
                                 item = { item } 
                                 navigation = { navigation } /> 
                            }
-       
-            showsVerticalScrollIndicator={false}
+              showsVerticalScrollIndicator={false}
         />
     </View>
   )

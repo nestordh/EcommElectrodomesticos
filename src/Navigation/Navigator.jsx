@@ -9,39 +9,43 @@ import { setUser } from '../Features/User/userSlice';
 import TabNavigator from './Tabs/TabNavigator';
 import { styles } from '../Assets/Styles/Styles';
 
+/**
+ * 
+ * @returns 
+ */
 
 const Navigator = () => {
-
   const {email} = useSelector((state) => state.userReducer.value);
-
   const dispatch = useDispatch()
-
+  
   useEffect( () => {
       (async () => {
           try {
+            console.log("recibir sesion")
               const session = await getSession()
+            console.log("Sesion: ");
+            console.log(session);
               if (session?.rows.length) {
                   const user = session.rows._array[0]
                   dispatch(setUser(user))
               }
-          } catch (error) {}
-          })()
+          } catch (error) {
+              console.log("Error al recibir el ingreso");
+              console.log(error.message);
+          }
+        })()
   }, [])
 
   return (
-    <SafeAreaView style = { styles.containerNav } > 
+    <SafeAreaView style={styles.containerNavigator} > 
+      
       <NavigationContainer>
-            {
-              email ?
-              (
-                <TabNavigator/>
-              ) 
-            : 
-              (
-                <AuthStack/>
-              )  
-            }
+      
+            { email ? (<TabNavigator/>) : ( <AuthStack/> ) }
+            {/* { true ? <TabNavigator/> : <AuthStack/> } */}
+      
       </NavigationContainer>
+    
     </SafeAreaView>
   )
 }

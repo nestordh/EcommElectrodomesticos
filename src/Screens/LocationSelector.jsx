@@ -1,14 +1,14 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import * as Location from "expo-location";
 
 import { setUserLocation } from "../Features/User/userSlice";
-import { colores } from "../Assets/Colors/Colores";
 import AddButton from "../Components/AddButton";
 import MapPreview from "../Components/MapPreview";
 import { mapa_api_key } from "../Database/firebaseConfig";
 import { usePostUserLocationMutation } from "../Services/shopServices";
+import { styles } from "../Assets/Styles/Styles";
 
 const LocationSelector = ({ navigation }) => {
 
@@ -18,7 +18,6 @@ const LocationSelector = ({ navigation }) => {
     const [triggerPostUserLocation, resultPostUserLocation] = usePostUserLocationMutation()
     const {localId} = useSelector(state => state.userReducer.value)
     const dispatch = useDispatch()
-    console.log(location);
     const onConfirmAddress = () => {
         const locationFormatted = {
             latitude: location.latitude,
@@ -53,23 +52,18 @@ const LocationSelector = ({ navigation }) => {
                 });
                 
             } catch (error) {
-                console.log(error.message);
                 setError(error.message)
             }
         })()
     }, [] )
 
-    
     useEffect(() => {
         (async () => {
             try {
                 if (location.latitude) {
                     const url_reverse_geocode = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${location.latitude},${location.longitude}&key=${mapa_api_key}`;
-                    
                     const response = await fetch(url_reverse_geocode);
                     const data = await response.json();
-                    console.dir(data);
-                    
                     setAddress(data.results[0].formatted_address);
                 }
             } catch (error) {
@@ -79,67 +73,36 @@ const LocationSelector = ({ navigation }) => {
     }, [location]);
 
     return (
-        <View style={styles.container}>
+        <View style={styles.containerLocationSelector}>
             
-            <Text style = {styles.text} > Mi Ubicación </Text>
+            <Text style = {styles.textLocationSelector} > Mi Ubicación </Text>
             
-            {location ? (
-            
-                <>
-                    <Text style = {styles.text} >Lat: {location.latitude}, long: {location.longitude}. </Text>
+            { location
+            ?
+            ( <>
+                    <Text style = {styles.textLocationSelector} >Lat: {location.latitude}, long: {location.longitude}. </Text>
                     
                     <MapPreview location={location} />
                     
-                    <Text style={styles.address}> Ubicacion Actúal: {address} 
+                    <Text style={styles.addressLocationSelector}> Ubicacion Actúal: {address} 
                     </Text>
                     
                     <AddButton
                         onPress={onConfirmAddress}
                         title="Confirmar Ubicacion"
                     />
-                </>
-
-            ) : (
-                
-                <>
+              </>
+            )
+            :
+            ( <>
                     <View style={styles.noLocationContainer}>
-                       
                         <Text>{error}</Text>
-                
                     </View>
-                </>
-            
-            )}
-            
+              </>
+            )
+            }
         </View>
     );
 };
 
 export default LocationSelector;
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "flex-start",
-    },
-    text: {
-        paddingTop: 20,
-        fontFamily: 'Noto-Sans',
-        fontSize: 18
-    },
-    noLocationContainer: {
-        width: 200,
-        height: 200,
-        borderWidth: 2,
-        borderColor: colores.Light,
-        padding: 10,
-        justifyContent: "center",
-        alignItems: "center",
-    },
-    address: {
-        padding: 10,
-        fontFamily: "Noto-Sans",
-        fontSize: 16,
-    },
-});

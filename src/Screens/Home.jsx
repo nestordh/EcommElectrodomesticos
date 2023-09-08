@@ -13,23 +13,24 @@ import { styles } from '../Assets/Styles/Styles'
 
 const Home = ( { 
     navigation,
-    
-     } ) => {
+    } ) => {
 
     const {data: categories, isLoading, isError} = useGetCategoriesQuery()
-
+    
     return (
       <View style = { styles.containerHome } >
 
-          <FlatList
-              style={styles.flatlistHome}
-              data = { categories}
-              keyExtractor = { category => category }
-              renderItem = {({item}) => <CategoryItem item = {item} navigation = {navigation}/>}
-              showsVerticalScrollIndicator = { false }
-              showsHorizontalScrollIndicator = {false}
-              contentContainerStyle = {styles.wrapperHome}
-          />
+        <FlatList
+            style={styles.flatlistHome}
+            data = { categories}
+            keyExtractor = { category => category }
+            renderItem = {({item}) =>
+                         <CategoryItem item = {item} 
+                         navigation = {navigation} />}
+            showsVerticalScrollIndicator = { false }
+            showsHorizontalScrollIndicator = {false}
+            contentContainerStyle = {styles.wrapperHome}
+        />
       
       </View>
     )

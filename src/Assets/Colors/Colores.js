@@ -10,18 +10,18 @@ export const colores = {
     fondo2:"#D0D3D4",
     }    
 
-export const colores1 = {    
-    back:"#ACEDFF",
-    backLight:"#D9E3EC",
-    icon:"#5475AE",
-    iconLight:"#8BB3E7",
-    dark:"#322654",
-    light:"#D3CCE6",
+export const col1 = {    
+    firt_back:"#ACEDFF",
+    firt_backLight:"#D9E3EC",
+    sec_icon:"#5475AE",
+    sec_iconLight:"#8BB3E7",
+    third_dark:"#322654",
+    third_light:"#D3CCE6",
     buttom:"#7E7D7F",
     buttomLight:"A8A7A9#",
 }
 
-export const colores2 = {
+export const col2 = {
     1:"#461959",
     2:"#7A316F",
     3:"#CD6688",

@@ -1,6 +1,7 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Text, View } from 'react-native'
 import React from 'react'
-import { colores } from '../Global/Colores'
+
+import { styles } from '../Assets/Styles/Styles'
 
 const Footer = () => {
   return (
@@ -14,16 +15,3 @@ const Footer = () => {
 }
 
 export default Footer
-
-const styles = StyleSheet.create({
-    containerFooter:{
-        backgroundColor: colores.Light,
-        justifyContent: "center",
-        alignItems: "center"
-    },
-    textFooter:{
-        fontSize: 10,
-        fontFamily: 'Lobster',
-    }
-
-})

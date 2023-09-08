@@ -1,10 +1,20 @@
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Pressable, Text, View } from "react-native";
 import { Entypo } from "@expo/vector-icons";
 import React from "react";
+
 import { styles } from "../Assets/Styles/Styles";
+
+
+/**
+ * 
+ * @param {*} param0 
+ * @returns 
+ */
 
 const AddressItem = ({ location, navigation }) => {
 
+    console.log(location);
+    
     const onChangeLocation = () => {
         navigation.navigate('Location Selector')
     }
@@ -13,19 +23,15 @@ const AddressItem = ({ location, navigation }) => {
         <View style={styles.containerAdressItem} onPress={() => {}}>
             
             <View style={styles.textContainerAddressItem}>
-                
                 <Text style={styles.textAddressItem}> {location.address} </Text>
-            
             </View>
             
             <Pressable onPress={onChangeLocation}>
-            
-                <Entypo name="location" size={30} color="black">
-            
+                <Entypo name="location"
+                        size={30} 
+                        color="black">
                     <Text style={styles.text2AddresItem}> Cambiar </Text>
-            
                 </Entypo>
-            
             </Pressable>
         
         </View>

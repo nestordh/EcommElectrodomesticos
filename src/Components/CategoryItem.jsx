@@ -6,7 +6,6 @@ import { setCategorySelected } from '../Features/Market/marketSlice'
 import Card from './Card'
 import { styles } from '../Assets/Styles/Styles'
 
-
 /**
  * estilos
  * @param   
@@ -24,7 +23,7 @@ const CategoryItem = ( {
   
   const onSelectCategory = () => {
         dispatch(setCategorySelected(item))
-        navigation.navigate('ItemListCategory', { category: item } )
+        navigation.navigate('ItemListCategory', {category: item})
   }
 
   return (
@@ -33,10 +32,10 @@ const CategoryItem = ( {
 
       <Pressable onPress = { onSelectCategory } >
         
-            <Card additionalStyle = { styles.additionalStyle } >
+            <Card additionalStyle = { styles.additionalStyleCat } >
                   
                   <Text style = { styles.textCategoryItem } > { item } </Text>
-            
+   
             </Card>
       
       </Pressable>

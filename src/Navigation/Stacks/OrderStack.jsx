@@ -8,18 +8,17 @@ const Stack = createNativeStackNavigator()
 
 const OrderStack = () => {
   return (
-    
-    <Stack.Navigator
-          initialRouteName = "OrderScreen"
-          screenOptions = { ( { route,
-                                navigation
-                         } ) => ( {
-            header: () => {
-              return <Header route={route} navigation={navigation} /> ;
-            },
+        <Stack.Navigator
+             initialRouteName = "OrderScreen"
+             screenOptions= {({ route,
+                             navigation
+                         }) => ({
+                     header: () => {
+                         return <Header route={route} navigation={navigation} /> 
+                        },
           })}>
 
-          <Stack.Screen name = "Ordenes de compra" component={OrderScreen} />
+          <Stack.Screen name = "OrderScreen" component={OrderScreen} />
      
       </Stack.Navigator>
   

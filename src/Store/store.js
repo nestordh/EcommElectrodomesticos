@@ -7,6 +7,8 @@ import counterReducer from '../Features/Counter/counterSlice'
 import marketReducer from '../Features/Market/marketSlice'
 import cartReducer from '../Features/Cart/cartSlice'
 import userReducer from '../Features/User/userSlice'
+import orderReducer from "../Features/Order/orderSlice"
+
 
 const store = configureStore({
     reducer: {
@@ -14,6 +16,7 @@ const store = configureStore({
         marketReducer,
         cartReducer,
         userReducer,
+        orderReducer,
         [shopApi.reducerPath]: shopApi.reducer,
         [authApi.reducerPath]: authApi.reducer,
     },

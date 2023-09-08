@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import { Image, View, StyleSheet, Text } from "react-native";
-import AddButton from "../Components/AddButton";
-import { colores } from "../Assets/Colors/Colores";
-import { usePostProfileImageMutation } from "../Services/shopServices";
-import { useDispatch, useSelector } from "react-redux";
-import { saveImage } from "../Features/User/userSlice";
+import { Image, View, Text } from "react-native";
 import * as ImagePicker from "expo-image-picker";
 import * as MediaLibrary from "expo-media-library";
+import { useDispatch, useSelector } from "react-redux";
+
+import AddButton from "../Components/AddButton";
+import { usePostProfileImageMutation } from "../Services/shopServices";
+import { saveImage } from "../Features/User/userSlice";
+import { styles } from "../Assets/Styles/Styles";
 
 const ImageSelector = ({ navigation }) => {
     const [image, setImage] = useState(null);
@@ -21,11 +22,8 @@ const ImageSelector = ({ navigation }) => {
         return true;
     };
     const pickImage = async () => {
-
         const isCameraOk = await verifyCameraPermissions();
-
         if (isCameraOk) {
-           
             let result = await ImagePicker.launchCameraAsync({
                 mediaTypes: ImagePicker.MediaTypeOptions.All,
                 allowsEditing: true,
@@ -33,9 +31,7 @@ const ImageSelector = ({ navigation }) => {
                 quality: 1,
             });
 
-            console.log(result.assets);
-
-            if (!result.canceled) {
+        if (!result.canceled) {
                 setImage(result.assets[0].uri);
             }
         }
@@ -43,13 +39,11 @@ const ImageSelector = ({ navigation }) => {
 
     const confirmImage = async () => {
         try {
-           
             const { status } = await MediaLibrary.requestPermissionsAsync();
             if (status === "granted") {
                 console.log("Only valid on emulators and physical devices");
                 
                 const response = await MediaLibrary.createAssetAsync(image);
-                // console.log(response.uri);
                 
                 triggerSaveImage({
                     image: response.uri,
@@ -65,17 +59,18 @@ const ImageSelector = ({ navigation }) => {
     };
 
     return (
-        <View style={styles.container}>
+        <View style={styles.containerImageSelector}>
             {image ? (
                 <>
-                    <Image source={{ uri: image }} style={styles.image} />
+                    <Image source={{ uri: image }} style={styles.imageImageSelector} />
                     <AddButton title = "Tomar otra foto" onPress={pickImage} />
                     <AddButton title = "Confirmar Foto" onPress={confirmImage} />
                 </>
             ) : (
                 <>
-                    <View style={styles.noPhotoContainer}>
-                        <Text>No hay foto para mostrar...</Text>
+                    <View style={styles.noPhotoContainerImageSelector}>
+                        <Text style={styles.text1ImageSelector}>No hay foto para mostrar...</Text>
+                        <Text style={styles.text2ImageSelector}> Aqui va a ir su foto de perfil</Text>
                     </View>
                     <AddButton title="Tomar una Foto" onPress={pickImage} />
                 </>
@@ -85,26 +80,3 @@ const ImageSelector = ({ navigation }) => {
 };
 
 export default ImageSelector;
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "flex-start",
-        gap: 20,
-        marginTop: 20,
-    },
-    image: {
-        width: 200,
-        height: 200,
-    },
-    noPhotoContainer: {
-        width: 200,
-        height: 200,
-        borderWidth: 2,
-        borderColor: colores.green,
-        padding: 10,
-        justifyContent: "center",
-        alignItems: "center",
-    },
-});

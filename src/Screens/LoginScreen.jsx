@@ -1,13 +1,20 @@
 import React, { useState, useEffect } from "react";
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Pressable, Text, View } from "react-native";
 import { useDispatch } from "react-redux";
+
+import InputForm from "../Components/InputForm";
+import SubmitButton from "../Components/SubmitButton";
 import { useSignInMutation } from "../Services/authServices";
 import { isAtLeastSixCharacters, isValidEmail } from "../Validations/auth";
 import { setUser } from "../Features/User/userSlice";
-import InputForm from "../Components/InputForm";
-import SubmitButton from "../Components/SubmitButton";
 import { insertSession } from "../SQLite";
-import { colores } from "../Assets/Colors/Colores";
+import { styles } from "../Assets/Styles/Styles";
+
+/**
+ * 
+ * @param {*} param0 
+ * @returns 
+ */
 
 const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
@@ -22,7 +29,9 @@ const LoginScreen = ({ navigation }) => {
     const isCorrectPassword = isAtLeastSixCharacters(password);
     
     if (isValidVariableEmail && isCorrectPassword) {
-      triggerSignIn({ email, password, returnSecureToken: true,
+      triggerSignIn({ email,
+                      password, 
+                      returnSecureToken: true,
       });
     }
     if (!isValidVariableEmail) setErrorEmail("Email no es correcto");
@@ -32,27 +41,28 @@ const LoginScreen = ({ navigation }) => {
     else setErrorPassword("");
   };
 
+console.log(resultSignIn)
+
   useEffect(() => {
     (async () => {
       try {
         if (resultSignIn.isSuccess) {
           const response = await insertSession({
-            idToken: resultSignIn.data.idToken,
-            localId: resultSignIn.data.localId,
-            email: resultSignIn.data.email,
-          });
+                                idToken: resultSignIn.data.idToken,
+                                localId: resultSignIn.data.localId,
+                                email: resultSignIn.data.email,
+                        });
           
-          dispatch(
-            setUser({
-              email: resultSignIn.data.email,
-              idToken: resultSignIn.data.idToken,
-              localId: resultSignIn.data.localId,
-              profileImage: "",
-              location: {
-                latitude: "",
-                longitude: "",
-              },
-            })
+                       dispatch ( setUser({
+                                email: resultSignIn.data.email,
+                                idToken: resultSignIn.data.idToken,
+                                localId: resultSignIn.data.localId,
+                                profileImage: "",
+                                location: {
+                                  latitude: "",
+                                  longitude: "",
+                                },
+                              })
           );
         }
       } 
@@ -62,10 +72,10 @@ const LoginScreen = ({ navigation }) => {
   }, [resultSignIn]);
 
   return (
-    <View style={styles.main}>
-      <View style={styles.container}>
+    <View style={styles.mainLoginScreen}>
+      <View style={styles.containerLoginScreen}>
         
-        <Text style={styles.title}> Iniciar Sesion </Text>
+        <Text style={styles.titleLoginScreen}> Iniciar Sesion </Text>
         
         <InputForm
           label={"email"}
@@ -80,12 +90,13 @@ const LoginScreen = ({ navigation }) => {
           isSecure={true}
         />
 
-        <SubmitButton onPress={onSubmit} title=" Enviar/Entrar " />
+        <SubmitButton onPress={onSubmit}
+                      title=" Entrar " />
 
-        <Text style={styles.sub}> No tienes una cuenta? </Text>
+        <Text style={styles.subLoginScreen}> No tienes una cuenta? </Text>
 
         <Pressable onPress={() => navigation.navigate("SignUp")}>
-          <Text style={styles.subLink}> Registrarse </Text>
+          <Text style={styles.subLinkLoginScreen}> Registrarse </Text>
         </Pressable>
 
       </View>
@@ -94,34 +105,3 @@ const LoginScreen = ({ navigation }) => {
 };
 
 export default LoginScreen;
-
-const styles = StyleSheet.create({
-  main: {
-    width: "100%",
-    height: "100%",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  container: {
-    width: "90%",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: colores.Light,
-    gap: 15,
-    paddingVertical: 20,
-    borderRadius: 10,
-  },
-  title: {
-    fontSize: 22,
-    fontFamily: "Noto-Sans",
-  },
-  sub: {
-    fontSize: 14,
-    color: "black",
-  },
-  subLink: {
-    fontSize: 14,
-    color: "blue",
-  },
-});
