@@ -1,22 +1,18 @@
-import { StyleSheet, Text, View, Image, Pressable } from "react-native";
+import { Text, View, Image, Pressable } from "react-native";
 import React from "react";
 import { Entypo } from "@expo/vector-icons"
-import {Feather } from "@expo/vector-icons"
+import { useDispatch } from "react-redux";
 
 import { styles } from "../Assets/Styles/Styles";
-import { useDispatch } from "react-redux";
 import { removeCartItem } from "../Features/Cart/cartSlice";
 
 /**
- * 
  * @param {*} param0 
  * @returns 
  */
 
-const CartItem = ({ cartItem }) => {
+const CartItem = ({cartItem}) => {
     
-    console.log(cartItem);
-
     const dispatch = useDispatch();
     
     return (
@@ -38,15 +34,16 @@ const CartItem = ({ cartItem }) => {
                             resizeMode="cover"
                          />
                 </View>
+                
                 <View style={styles.iconsCartItem}>
                     <Pressable onPress={() => dispatch(removeCartItem(cartItem.id))}>
-                    <Feather name="x-circle"
-                             size={20} 
-                             color="gray" />
+                         <Entypo name="trash"
+                                 size={30}
+                                 color="orange" />
                     </Pressable>
                 </View>
             </View>    
-            <Entypo name="trash" size={30} color="green" />
+            
         </View>
     );
 };

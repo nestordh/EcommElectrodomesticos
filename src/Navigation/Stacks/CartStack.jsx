@@ -18,10 +18,9 @@ const CartStack = () => {
                 },
             })}
         >
-            {/* <Stack.Screen name = "Carrito de compras"  component = { Cart } /> */}
-            <Stack.Screen name="CartScreen" component={Cart} />
-
-
+           
+        <Stack.Screen name="Carrito de compras" component={Cart} />
+       
         </Stack.Navigator>
     );
 };

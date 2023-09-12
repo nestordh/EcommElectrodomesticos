@@ -12,7 +12,7 @@ export const marketSlice = createSlice({
             idSelected: "",
             allProducts: [],
             productsSelected: [],
-            productSelected: [],
+            productIdSelected: [],
      } 
     },
   
@@ -23,7 +23,7 @@ export const marketSlice = createSlice({
         },
                 
         setIdSelected: (state, action) => {
-            state.value.productSelected = state.value.allProducts.find((product) => product.id === action.payload)
+            state.value.productIdSelected = state.value.allProducts.find((product) => product.id === action.payload)
             state.value.idSelected = action.payload;
         },
         

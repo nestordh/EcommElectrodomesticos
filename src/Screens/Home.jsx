@@ -11,17 +11,21 @@ import { styles } from '../Assets/Styles/Styles'
  * @returns categorias
  */
 
-const Home = ( { 
-    navigation,
-    } ) => {
+const Home = ({ navigation}) => {
 
     const {data: categories, isLoading, isError} = useGetCategoriesQuery()
     
+    console.log(isLoading)
+    console.log(isError)
+
     return (
       <View style = { styles.containerHome } >
 
+        
+
+
         <FlatList
-            style={styles.flatlistHome}
+            style={styles.flatlistHome2}
             data = { categories}
             keyExtractor = { category => category }
             renderItem = {({item}) =>
@@ -37,3 +41,17 @@ const Home = ( {
   }
 
 export default Home
+
+
+// {/* <FlatList
+//             style={styles.flatlistHome}
+//             data = { categories}
+//             keyExtractor = { category => category }
+//             renderItem = {({item}) =>
+//                          <CategoryItem item = {item} 
+//                          navigation = {navigation} />}
+//             showsVerticalScrollIndicator = { false }
+//             showsHorizontalScrollIndicator = {false}
+//             contentContainerStyle = {styles.wrapperHome}
+//             horizontal={true}
+//             /> */}

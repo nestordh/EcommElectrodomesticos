@@ -21,6 +21,7 @@ export const styles = StyleSheet.create({
     color: "black",
   },
 
+
 //AdressItem
 containerAdressItem: {
     height: 100,
@@ -133,7 +134,7 @@ containerCardItem: {
     justifyContent: "center",
     alignItems: "center",
   },
-  textCart: {
+  textCartScreen: {
     fontSize: 20,
     fontFamily: "Noto-Sans",
     padding: 30,
@@ -143,15 +144,15 @@ containerCardItem: {
     fontSize: 20,
     fontFamily: "Noto-Sans",
     padding: 10,
-    //flexDirection: 'row',
-    //justifyContent: 'center',
-    //alignItems: 'center',
     margin: 10,
     borderRadius: 10,
     borderColor: "black",
     borderWidth: 2,
     backgroundColor: col1.firt_backLight,
   },
+  
+
+
 
 
 //CategoryItem
@@ -195,7 +196,6 @@ textCategoryItem: {
     fontSize: 26,
   },
   span1Counter: {
-    // backgroundColor: colores.plata,
     width: "40%",
     padding: 10,
     textAlign: "center",
@@ -243,6 +243,7 @@ textCategoryItem: {
     fontFamily: "Noto-Sans",
   },
 
+
 //Footer
 containerFooter:{
     backgroundColor: colores.Light,
@@ -253,6 +254,7 @@ textFooter:{
     fontSize: 10,
     fontFamily: 'Lobster',
 },
+
 
 //Header
   containerHeader: {
@@ -278,23 +280,30 @@ textFooter:{
     top: "20%",
   },
 
+
   //Home
-  wrapperHome: {
-    gap: 20,
-  },
   containerHome: {
     flex: 1,
     backgroundColor: col1.sec_icon,
     alignItems: "center",
   },
   flatlistHome: {
-    width: "90%",
+    width: "20%",
+    backgroundColor:col2.three,
     // borderRightWidth: "#322654",
   },
   flatlistHome1: {
-    width: "90%",
+    width: "80%",
+    // borderRightWidth: "#322654",
+  },
+  flatlistHome2: {
+    width: "70%",
     borderRightWidth: "#322654",
   },
+  wrapperHome: {
+    gap: 20,
+  },
+
 
 //ImageSelector
 containerImageSelector: {
@@ -398,6 +407,7 @@ containerInputForm: {
     padding: 8,
   },
 
+
 //ItemListCategory
 containerItemListCategory: {
     height: "100%",
@@ -420,6 +430,7 @@ containerListAddress: {
     fontFamily: "Noto-Sans",
     fontSize: 20,
   },
+
 
 //LocationSelector
 containerLocationSelector: {
@@ -449,6 +460,7 @@ containerLocationSelector: {
     color: col1.buttomLight,
     fontFamily: "Noto-Sans",
   },
+
 
 //LoginScreen
 mainLoginScreen: {
@@ -501,6 +513,7 @@ mainLoginScreen: {
     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
 
+
 //orderItem
 containerCardOrderItem: {
     height: 100,
@@ -531,12 +544,10 @@ containerCardOrderItem: {
   },
   imageOrderItem: {
     color: "YellowBox",
-  
   },
 
 //OrderScreen 
 containerOrderScreen: {
-    
     flexDirection: "column",
     justifyContent: "flex-start",
     alignItems: "center",
@@ -548,11 +559,11 @@ textOrderScreen: {
     fontSize: 15,
     color:"gray",
     gap:30,
-
 },
 
-  //ProductItem
-  imageProductItem: {
+
+//ProductItem
+imageProductItem: {
     height: 100,
     width: "75%",
     borderRadius: 8,
@@ -603,14 +614,14 @@ containerSmSearch: {
 },
 
 
-  //SignUp
-  mainSignUp: {
+//SignUp
+mainSignUp: {
     width: "100%",
     height: "100%",
     justifyContent: "center",
     alignItems: "center",
-  },
-  containerSignUp: {
+},
+containerSignUp: {
     width: "90%",
     flexDirection: "column",
     justifyContent: "center",
@@ -620,21 +631,21 @@ containerSmSearch: {
     paddingVertical: 20,
     borderRadius: 10,
     margin: 10,
-  },
-  titleSignUp: {
+},
+titleSignUp: {
     fontSize: 22,
     fontFamily: "Noto-Sans",
-  },
-  subSignUp: {
+},
+subSignUp: {
     fontSize: 14,
     fontFamily: "Noto-Sans",
     color: "black",
-  },
-  subLinkSignUp: {
+},
+subLinkSignUp: {
     fontSize: 26,
     fontFamily: "Noto-Sans",
     color: "blue",
-  },
+},
 
 //SubmitButton
 buttonSubmitButton: {
@@ -650,34 +661,14 @@ textSubmitButton: {
     fontSize: 22
 },
 
-  //TabNavigator
-  tabBarNav: {
+
+//TabNavigator
+tabBarNav: {
     backgroundColor: col1.sec_iconLight,
     shadowColor: "black",
     height: 45,
-  },
-  itemTabNav: {},
+},
 
-
-  
-  
-  
-
-
-
-
-
-  
-  
-  
-
-
-
-  
-
-
-
-  
-
-  
+// itemTabNav: {},
+   
 });

@@ -1,4 +1,4 @@
-import { Pressable, Text, View } from "react-native";
+import { Pressable, Text, View, Image } from "react-native";
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 
@@ -68,7 +68,9 @@ const SignUpScreen = ({ navigation }) => {
             else setErrorConfirmPassword('')
 
         } catch (err) {
-            ('mal direccion')
+            console.log("Catch error");
+            console.log(err.message);
+            
             }
     };
 
@@ -76,13 +78,10 @@ const SignUpScreen = ({ navigation }) => {
         <View style={styles.mainSignUp}>
 
             <View>
-                <Image 
-                    source={{basLogo1}}
+                <Image source={require('../Assets/Images/basLogo1.jpg')} 
                     style={styles.imageSignUp}
-                    resizeMode="contain"
-                    />   
-            </View>
-             
+                    resizeMode="contain"/>  
+            </View> 
 
             <View style={styles.containerSignUp} >
                 <Text style={styles.subSignUp}> Ya tienes una cuenta? </Text>
@@ -111,8 +110,8 @@ const SignUpScreen = ({ navigation }) => {
                            isSecure={true} />
 
                 <SubmitButton style={styles.subLinkSignUp}
-                              title="Entrar" 
-                              onPress={onSubmit} /> 
+                              onPress={onSubmit}
+                              title="Entrar" /> 
             
             </View>
         </View>

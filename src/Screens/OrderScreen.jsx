@@ -30,7 +30,7 @@ const OrderScreen = ({navigation}) => {
                 <Text style={styles.textOrderScreen}> Aun no tiene una compra realizada</Text> 
                 <AddButton title="Ir a la tienda"
                            onPress={() => navigation.navigate("Home") } />
-                           {/* onPress={Home} /> */}
+                           
             </View>
         } 
       </View>
@@ -38,3 +38,7 @@ const OrderScreen = ({navigation}) => {
 }
 
 export default OrderScreen
+
+
+
+// {/* onPress={Home} /> */}

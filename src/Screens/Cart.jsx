@@ -62,10 +62,10 @@ const Cart = ({ navigation }) => {
         ) 
         : 
             <View> 
-                    <Text style={styles.emptyCart}> Su carrito esta vacio </Text>
+                    <Text style={styles.textCartScreen}> Su carrito esta vacio </Text>
                     <AddButton title="Ir a la tienda"
-                               onPress={() => navigation.navigate('Home')}
-                            //    onPress={onConfirm}                               
+                            //    onPress={() => navigation.navigate('Home')}
+                               onPress={onConfirm}                               
                                />
             </View> 
         }

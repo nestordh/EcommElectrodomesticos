@@ -61,15 +61,7 @@ const ItemDetail = ({ navigation, route }) => {
                              <Text>Add Cart</Text>
                         </Pressable>
 
-                        {/* <AddButton
-                             title="Agregar carrito"
-                             onPress={{onAddCart}} />
-
-
-                        <Button title="Agregar al carrito"
-                                onPress={onAddCart}
-                        ></Button> */}
-                   
+                       
                     </View>
                 
                 </View>
@@ -82,3 +74,15 @@ const ItemDetail = ({ navigation, route }) => {
 };
 
 export default ItemDetail;
+
+
+
+//  {/* <AddButton
+//                              title="Agregar carrito"
+//                              onPress={{onAddCart}} />
+
+
+//                         <Button title="Agregar al carrito"
+//                                 onPress={onAddCart}
+//                         ></Button> */}
+                   

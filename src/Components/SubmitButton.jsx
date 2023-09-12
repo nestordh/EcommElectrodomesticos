@@ -3,8 +3,7 @@ import React from "react";
 
 import { styles } from "../Assets/Styles/Styles";
 
-/**
- * 
+/** 
  * @param {*} param0 
  * @returns 
  */

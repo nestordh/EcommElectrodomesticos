@@ -41,8 +41,7 @@ const Navigator = () => {
       
       <NavigationContainer>
       
-            { email ? (<TabNavigator/>) : ( <AuthStack/> ) }
-            {/* { true ? <TabNavigator/> : <AuthStack/> } */}
+            { email ? (<TabNavigator/>) :  <AuthStack/>  }
       
       </NavigationContainer>
     
@@ -51,3 +50,5 @@ const Navigator = () => {
 }
 
 export default Navigator
+
+            // {/* { true ? <TabNavigator/> : <AuthStack/> } */}

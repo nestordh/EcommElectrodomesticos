@@ -11,12 +11,10 @@ const OrderItem = ({ order, updatedAt, item, }) => {
     
     return (
         <View style={styles.containerCardOrderItem}
-              onPress={() => {}} >
+              onPress={() => {} } >
         
             <View>
-                <Text style={styles.textOrderItem}>
-                            {new Date(order.createdAt).toLocaleString()} </Text>
-                    
+                <Text style={styles.textOrderItem}> {new Date(order.createdAt).toLocaleString()} </Text>
                 <Text style = { styles.text2OrderItem } > Cant: 01 </Text>
                 <Text style = { styles.text2OrderItem } > $ { total } </Text>
                 <Text style = { styles.text2OrderItem } > Total ${parseFloat(total).toFixed(2)} </Text>
@@ -36,9 +34,10 @@ const OrderItem = ({ order, updatedAt, item, }) => {
                                     </View>
                                 </View>;
                             }}
-                            showsVerticalScrollIndicator={false}
-                    />
+                            showsVerticalScrollIndicator={false} />
+
             </View>
+            
             <Feather name="search" size={30} color="black" />
                 
         </View>

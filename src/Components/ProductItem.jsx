@@ -4,21 +4,13 @@ import React from "react";
 import Card from "./Card";
 import { styles } from "../Assets/Styles/Styles"
 
-const ProductItem = ({ 
-        item, 
-        navigation
-     }) => {
+const ProductItem = ({ item, navigation }) => {
   
     const { height, width } = useWindowDimensions();
 
-    const onSelect = (id) => {
-     navigation.navigate('Detail', {productId: item.id, title: item.title})
-      
-    };
+    const onSelect = () => { navigation.navigate('Detail', {productId: item.id, title: item.title})};
 
     return (
-      <View>
-
       <Pressable onPress={() => onSelect(item.id)}>
         <Card additionalStyle={styles.additionalStylesCardProductItem}>
           <Text style={width > 350 
@@ -29,27 +21,16 @@ const ProductItem = ({
             {item.title}
           </Text>
   
-          <Image
-            resizeMode="cover"
-            style={styles.imageProductItem}
-            source={{ uri: item.images[0] }}
-            />
+          <Image resizeMode="cover"
+                 style={styles.imageProductItem}
+                 source={{ uri: item.images[0] }} />
+
+          <View style={styles.containerProduct}>
+              <Text style={styles.textTitleProductItem}>{item.title}</Text>
+              <Text style={styles.textPriceProductItem}>${item.price}</Text>
+          </View> 
         </Card>
       </Pressable>
-
-      <View style={styles.containerProduct}>
-                      <View>
-                          <Text style={styles.textTitleProductItem}>{item.title}</Text>
-                          <Text style={styles.textPriceProductItem}>${item.price}</Text>
-                      </View>
-                      <Image 
-                        resizeMode='cover'
-                        style = {styles.imageProductItem}
-                        source={{uri: item.images[0]}}
-                      />
-                  </View> 
-      </View>
-    );
-  };
+)  }
   
   export default ProductItem; 

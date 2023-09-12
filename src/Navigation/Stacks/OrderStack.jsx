@@ -18,9 +18,8 @@ const OrderStack = () => {
                         },
           })}>
 
-          <Stack.Screen name = "OrderScreen" component={OrderScreen} />
-     
-      </Stack.Navigator>
+          <Stack.Screen name = "Orden de compra" component={OrderScreen} />
+        </Stack.Navigator>
   
   );
 };

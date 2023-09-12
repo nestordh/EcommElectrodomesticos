@@ -5,8 +5,7 @@ import { FontAwesome, FontAwesome5 } from '@expo/vector-icons';
 import { styles } from '../Assets/Styles/Styles';
 
 
-/**
- * componentetBuscador componente de ItemListContainer 
+/** componente Buscador de ItemListContainer 
  * @param onSearch Devolucion de llamada cuando se busca
  * @param error muestra error
  */
@@ -15,7 +14,6 @@ const Search = ( { onSearch, error = "" } ) => {
     
     const [ keyword, setKeyword ] = useState("")
     const { width } = useWindowDimensions()
-
     const onErase = () => {
           setKeyword("")
           onSearch("")
@@ -31,15 +29,11 @@ const Search = ( { onSearch, error = "" } ) => {
                     onChangeText={setKeyword} />
 
         <Pressable onPress={()=>onSearch(keyword)}>
-             
-             <FontAwesome name = "search" size = { 24 } color = "black" />
-        
+            <FontAwesome name = "search" size = { 24 } color = "black" />
         </Pressable>
         
         <Pressable onPress = { onErase } >
-           
             <FontAwesome5 name = "eraser" size = { 24 } color = "black" />
-      
         </Pressable>
       
         { error ?

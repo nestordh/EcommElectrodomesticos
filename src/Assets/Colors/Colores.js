@@ -22,8 +22,8 @@ export const col1 = {
 }
 
 export const col2 = {
-    1:"#461959",
-    2:"#7A316F",
-    3:"#CD6688",
-    4:"#AED8CC",
+    one:"#461959",
+    two:"#7A316F",
+    three:"#CD6688",
+    four:"#AED8CC",
 }

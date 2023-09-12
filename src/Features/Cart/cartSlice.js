@@ -5,7 +5,7 @@ export const cartSlice = createSlice({
     initialState: {
         value: {
             user: "",
-            updatedAt: "",
+            updatedAt: 0,
             total: null,
             items: []
         }
@@ -33,9 +33,7 @@ export const cartSlice = createSlice({
             let totalQuantity = 0;
             state.value.items.forEach((item) => {totalQuantity += item.quantity});
             state.value.totalQuantity = totalQuantity;
-
             state.value.updatedAt = new Date().toLocaleString()  
-            
             state.value.orderId = Date.now();
         },
         
@@ -43,9 +41,7 @@ export const cartSlice = createSlice({
           
             let newItems = state.value.items.filter(item => item.id != action.payload)
             state.value.items = [...newItems]
-            state.value.total = state.value.items.reduce(
-                (acc, currentItem) => acc += currentItem.price * currentItem.quantity, 0)
-
+            state.value.total = state.value.items.reduce((acc, currentItem) => acc += currentItem.price * currentItem.quantity, 0)
             state.value.updatedAt = Date.now()
         },
 
@@ -64,7 +60,7 @@ export const cartSlice = createSlice({
 export const {addCartItem,
               removeCartItem,
               setUserCart,
-              removeFullCart
+              removeFullCart,
              } = cartSlice.actions
 
 export default cartSlice.reducer

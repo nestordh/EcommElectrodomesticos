@@ -1,9 +1,10 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
 import {urldb} from "../Database/firebaseConfig"
+import { databaseURL } from "../Database/firebaseConfig"
 
 export const shopApi = createApi({
     reducerPath: 'shopApi',
-    baseQuery: fetchBaseQuery({baseUrl: urldb}),
+    baseQuery: fetchBaseQuery({baseUrl: databaseURL}),
     
     endpoints: (builder) => ({
         

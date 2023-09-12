@@ -4,7 +4,6 @@ import React from "react";
 
 import { styles } from "../Assets/Styles/Styles";
 
-
 /**
  * 
  * @param {*} param0 
@@ -13,11 +12,7 @@ import { styles } from "../Assets/Styles/Styles";
 
 const AddressItem = ({ location, navigation }) => {
 
-    console.log(location);
-    
-    const onChangeLocation = () => {
-        navigation.navigate('Location Selector')
-    }
+    const onChangeLocation = () => { navigation.navigate('Location Selector') }
 
     return (
         <View style={styles.containerAdressItem} onPress={() => {}}>
